@@ -15,6 +15,7 @@
 
 	var/damtype = "brute"
 	var/force = 0
+	var/w_class = 3.0
 
 /obj/Destroy()
 	processing_objects -= src
@@ -25,6 +26,23 @@
 	if(nowindow)
 		return 0
 	return ..()
+
+// apparently called whenever an item is removed from a slot, container, or anything else.
+/obj/proc/dropped(mob/user as mob)
+	..()
+
+// called when this item is removed from a storage item, which is passed on as S. The loc variable is already set to the new destination before this is called.
+/obj/proc/on_exit_storage(obj/storage/S as obj)
+	return
+
+// called when this item is added into a storage item, which is passed on as S. The loc variable is already set to the storage item.
+/obj/proc/on_enter_storage(obj/storage/S as obj)
+	return
+
+// called when "found" in pockets and storage items. Returns 1 if the search should end.
+/obj/proc/on_found(mob/finder as mob)
+	return
+
 
 /obj/item/proc/is_used_on(obj/O, mob/user)
 

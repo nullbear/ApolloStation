@@ -167,16 +167,6 @@
 	src.closer.screen_loc = "[4+cols+1]:16,2:16"
 	return
 
-/datum/numbered_display
-	var/obj/item/sample_object
-	var/number
-
-	New(obj/item/sample as obj)
-		if(!istype(sample))
-			qdel(src)
-		sample_object = sample
-		number = 1
-
 //This proc determins the size of the inventory to be displayed. Please touch it only if you know what you're doing.
 /obj/item/weapon/storage/proc/orient2hud(mob/user as mob)
 
