@@ -30,7 +30,6 @@
 /obj/item/storage/box/New()
 	storage.max_size = 2.0
 	storage.max_volume = 26
-	storage.name = "box"
 
 /obj/item/storage/box/attack_self(mob/user as mob)
 	if(storage.contents.len)

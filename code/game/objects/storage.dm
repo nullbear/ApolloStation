@@ -219,7 +219,7 @@
 		return 0 //Means the storage item is the item itself.
 	if(contents.len >= 35)
 		if(!stop_messages)
-			usr << "<span class='notice'>[src] is full, make some space.</span>"
+			usr << "<span class='notice'>[loc.name] is full, make some space.</span>"
 		return 0 //Storage item is full
 
 	if(hold_list.len)
@@ -230,12 +230,12 @@
 				break
 		if(!ok)
 			if(!stop_messages)
-				usr << "<span class='notice'>[src] cannot hold [W].</span>"
+				usr << "<span class='notice'>[loc.name] cannot hold [W].</span>"
 			return 0 // The item is restricted from the storage object.
 
 	if (W.w_class > max_size)
 		if(!stop_messages)
-			usr << "<span class='notice'>[W] is too big for this [src].</span>"
+			usr << "<span class='notice'>[W] is too big for this [loc].</span>"
 		return 0
 
 	var/sum_w_class = total_volume()+(3**W.w_class)-W.w_class
@@ -263,11 +263,11 @@
 		if(!prevent_warning)
 			for(var/mob/M in viewers(usr, null))
 				if (M == usr)
-					usr << "<span class='notice'>You put \the [W] into [src].</span>"
+					usr << "<span class='notice'>You put \the [W] into [loc].</span>"
 				else if (M in range(1)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>[usr] puts [W] into [src].</span>")
+					M.show_message("<span class='notice'>[usr] puts [W] into [loc].</span>")
 				else if (W && W.w_class >= 3.0) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>[usr] puts [W] into [src].</span>")
+					M.show_message("<span class='notice'>[usr] puts [W] into [loc].</span>")
 
 		src.orient2hud(usr)
 		if(usr.s_active)

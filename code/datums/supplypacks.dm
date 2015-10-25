@@ -151,8 +151,8 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/evacuation
 	name = "Emergency equipment"
-	contains = list(/obj/item/weapon/storage/toolbox/emergency,
-					/obj/item/weapon/storage/toolbox/emergency,
+	contains = list(/obj/item/storage/toolbox/emergency,
+					/obj/item/storage/toolbox/emergency,
 					/obj/item/clothing/suit/storage/hazardvest,
 					/obj/item/clothing/suit/storage/hazardvest,
 					/obj/item/weapon/tank/emergency_oxygen,
@@ -503,8 +503,8 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/electrical
 	name = "Electrical maintenance crate"
-	contains = list(/obj/item/weapon/storage/toolbox/electrical,
-					/obj/item/weapon/storage/toolbox/electrical,
+	contains = list(/obj/item/storage/toolbox/electrical,
+					/obj/item/storage/toolbox/electrical,
 					/obj/item/clothing/gloves/yellow,
 					/obj/item/clothing/gloves/yellow,
 					/obj/item/weapon/cell,
@@ -671,7 +671,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 	contains = list(/obj/item/device/assembly/prox_sensor,
 					/obj/item/device/assembly/prox_sensor,
 					/obj/item/device/assembly/prox_sensor,
-					/obj/item/weapon/storage/toolbox/electrical,
+					/obj/item/storage/toolbox/electrical,
 					/obj/item/device/flash,
 					/obj/item/device/flash,
 					/obj/item/device/flash,

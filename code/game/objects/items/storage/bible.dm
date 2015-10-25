@@ -11,7 +11,6 @@
 /obj/item/storage/bible/New()
 	storage.max_size = 2.0
 	storage.max_volume = 26
-	storage.name = "backpack"
 
 /obj/item/storage/bible/booze
 	name = "bible"

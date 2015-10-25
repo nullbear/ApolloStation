@@ -1,0 +1,89 @@
+/obj/item/storage/toolbox
+	name = "toolbox"
+	desc = "Danger. Very robust."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "red"
+	item_state = "toolbox_red"
+	flags = CONDUCT
+	force = 5.0
+	throwforce = 10.0
+	throw_speed = 1
+	throw_range = 7
+	w_class = 4.0
+	origin_tech = "combat=1"
+	attack_verb = list("robusted")
+
+	New()
+		..()
+		storage.max_size = 3.0
+		storage.max_volume = 80
+		if (src.type == /obj/item/storage/toolbox)
+			world << "BAD: [src] ([src.type]) spawned at [src.x] [src.y] [src.z]"
+			qdel(src)
+
+/obj/item/storage/toolbox/emergency
+	name = "emergency toolbox"
+	icon_state = "red"
+	item_state = "toolbox_red"
+
+	New()
+		..()
+		new /obj/item/weapon/crowbar/red(storage)
+		new /obj/item/weapon/extinguisher/mini(storage)
+		if(prob(50))
+			new /obj/item/device/flashlight(storage)
+		else
+			new /obj/item/device/flashlight/flare(storage)
+			new /obj/item/device/flashlight/flare(storage)
+		new /obj/item/device/radio(storage)
+
+/obj/item/storage/toolbox/mechanical
+	name = "mechanical toolbox"
+	icon_state = "blue"
+	item_state = "toolbox_blue"
+
+	New()
+		..()
+		new /obj/item/weapon/screwdriver(storage)
+		new /obj/item/weapon/wrench(storage)
+		new /obj/item/weapon/weldingtool(storage)
+		new /obj/item/weapon/crowbar(storage)
+		new /obj/item/device/analyzer(storage)
+		new /obj/item/weapon/wirecutters(storage)
+
+/obj/item/storage/toolbox/electrical
+	name = "electrical toolbox"
+	icon_state = "yellow"
+	item_state = "toolbox_yellow"
+
+	New()
+		..()
+		var/color = pick("red","yellow","green","blue","pink","orange","cyan","white")
+		new /obj/item/weapon/screwdriver(storage)
+		new /obj/item/weapon/wirecutters(storage)
+		new /obj/item/device/t_scanner(storage)
+		new /obj/item/weapon/crowbar(storage)
+		new /obj/item/stack/cable_coil(storage,30,color)
+		new /obj/item/stack/cable_coil(storage,30,color)
+		if(prob(5))
+			new /obj/item/clothing/gloves/yellow(storage)
+		else
+			new /obj/item/stack/cable_coil(storage,30,color)
+
+/obj/item/storage/toolbox/syndicate
+	name = "suspicious looking toolbox"
+	icon_state = "syndicate"
+	item_state = "toolbox_syndi"
+	origin_tech = "combat=1;syndicate=1"
+	force = 7.0
+
+	New()
+		..()
+		var/color = pick("red","yellow","green","blue","pink","orange","cyan","white")
+		new /obj/item/weapon/screwdriver(storage)
+		new /obj/item/weapon/wrench(storage)
+		new /obj/item/weapon/weldingtool(storage)
+		new /obj/item/weapon/crowbar(storage)
+		new /obj/item/stack/cable_coil(storage,30,color)
+		new /obj/item/weapon/wirecutters(storage)
+		new /obj/item/device/multitool(storage)

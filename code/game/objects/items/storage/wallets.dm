@@ -31,7 +31,6 @@
 		"/obj/item/weapon/stamp")
 	storage.max_size = 1.0
 	storage.max_volume = 8
-	storage.name = "wallet"
 
 /obj/item/storage/wallet/attack_hand(mob/user as mob)
 	..()

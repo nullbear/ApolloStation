@@ -14,7 +14,6 @@
 /obj/item/storage/backpack/New()
 	storage.max_size = 3.0
 	storage.max_volume = 80
-	storage.name = "backpack"
 
 /obj/item/storage/backpack/attackby(obj/item/W as obj, mob/user as mob)
 	if (storage.use_sound)
@@ -40,7 +39,6 @@
 /obj/item/storage/backpack/holding/New()
 	storage.max_size = 5.0
 	storage.max_volume = 242
-	storage.name = "backpack"
 
 /obj/item/storage/backpack/holding/attackby(obj/item/W as obj, mob/user as mob)
 	if(crit_fail)
@@ -75,7 +73,6 @@
 	New()
 		storage.max_size = 3.0
 		storage.max_volume = 242
-		storage.name = "backpack"
 
 /obj/item/storage/backpack/cultpack
 	name = "trophy rack"

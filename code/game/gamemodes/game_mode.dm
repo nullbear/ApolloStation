@@ -62,7 +62,7 @@
 			new/datum/uplink_item(/obj/item/weapon/card/emag/weak, 1, "Encryptic Sequencer", "CE"),
 			new/datum/uplink_item(/obj/item/weapon/reagent_containers/tube/syndicream, 2, "Syndicream Tube", "SC"),
 			new/datum/uplink_item(/obj/item/weapon/storage/box/syndie_kit/spybug, 2, "Spybug Kit", "SK" ),
-			new/datum/uplink_item(/obj/item/weapon/storage/toolbox/syndicate, 1, "Fully Loaded Toolbox", "ST"),
+			new/datum/uplink_item(/obj/item/storage/toolbox/syndicate, 1, "Fully Loaded Toolbox", "ST"),
 			new/datum/uplink_item(/obj/item/weapon/storage/box/syndie_kit/clerical, 3, "Morphic Clerical Kit", "CK"),
 			new/datum/uplink_item(/obj/item/weapon/storage/box/syndie_kit/space, 3, "Space Suit", "SS"),
 			new/datum/uplink_item(/obj/item/clothing/glasses/thermal/syndi, 3, "Thermal Imaging Glasses", "TM"),
