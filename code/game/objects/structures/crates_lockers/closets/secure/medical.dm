@@ -12,8 +12,8 @@
 
 	New()
 		..()
-		new /obj/item/weapon/storage/box/autoinjectors(src)
-		new /obj/item/weapon/storage/box/syringes(src)
+		new /obj/item/storage/box/autoinjectors(src)
+		new /obj/item/storage/box/syringes(src)
 		new /obj/item/weapon/reagent_containers/dropper(src)
 		new /obj/item/weapon/reagent_containers/dropper(src)
 		new /obj/item/weapon/reagent_containers/glass/beaker(src)
@@ -171,8 +171,8 @@
 
 	New()
 		..()
-		new /obj/item/weapon/storage/box/pillbottles(src)
-		new /obj/item/weapon/storage/box/pillbottles(src)
+		new /obj/item/storage/box/pillbottles(src)
+		new /obj/item/storage/box/pillbottles(src)
 		return
 
 /obj/structure/closet/secure_closet/medical_wall

@@ -47,8 +47,8 @@
 	new /obj/item/clothing/under/waiter(src)
 	new /obj/item/device/radio/headset/headset_service(src)
 	new /obj/item/device/radio/headset/headset_service(src)
-	new /obj/item/weapon/storage/box/mousetraps(src)
-	new /obj/item/weapon/storage/box/mousetraps(src)
+	new /obj/item/storage/box/mousetraps(src)
+	new /obj/item/storage/box/mousetraps(src)
 	new /obj/item/clothing/under/rank/chef(src)
 	new /obj/item/clothing/head/chefhat(src)
 

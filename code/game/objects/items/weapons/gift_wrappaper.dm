@@ -64,7 +64,7 @@
 	var/gift_type = pick(/obj/item/weapon/sord,
 		/obj/item/weapon/storage/wallet,
 		/obj/item/weapon/storage/photo_album,
-		/obj/item/weapon/storage/box/snappops,
+		/obj/item/storage/box/snappops,
 		/obj/item/weapon/storage/fancy/crayons,
 		/obj/item/weapon/storage/backpack/holding,
 		/obj/item/weapon/storage/belt/champion,

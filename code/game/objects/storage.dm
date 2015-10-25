@@ -7,12 +7,12 @@
 	max_size affects the maximum weight class the storage object can hold.
 	total_volume affects the total volume the storage can hold. Volume is calculated by weight class:
 
-	w_class 1 = 3u
-	w_class 2 = 9u
-	w_class 3 = 27u
-	w_class 4 = 81u
-	w_class 5 = 243u
-	w_class 6 = 729u
+	w_class 1 = 2u
+	w_class 2 = 8u
+	w_class 3 = 26u
+	w_class 4 = 80u
+	w_class 5 = 242u
+	w_class 6 = 728u
 
 	A bag of holding, can store 81 pens, 27 pda's, 9 boxes, or 3 Backpacks.
 	A backpack, can store 27 pens, 9 pdas, or 3 boxes.
@@ -58,8 +58,7 @@
 
 	var/max_size = 3.0 // The maximum size of an object that can be placed within the container.
 	var/max_volume = 21 // The total volume of objects that can be placed inside the container.
-	var/volume = 0 // The current volume of objects that are inside the container.
-	var/whitelist = 0	// Whether the hold_list is a whitelist, or a blacklist.
+	var/whitelist = 1	// Whether the hold_list is a whitelist, or a blacklist.
 	var/list/hold_list = new/list() // A list of items that are either blacklisted, or whitelisted to this storage container.
 
 	// Flavour
@@ -71,6 +70,25 @@
 
 	var/obj/screen/storage/boxes = null
 	var/obj/screen/close/closer = null
+
+/obj/storage/New()
+	src.boxes = new /obj/screen/storage(  )
+	src.boxes.name = "storage"
+	src.boxes.master = src
+	src.boxes.icon_state = "block"
+	src.boxes.screen_loc = "7,7 to 10,8"
+	src.boxes.layer = 19
+	src.closer = new /obj/screen/close(  )
+	src.closer.master = src
+	src.closer.icon_state = "x"
+	src.closer.layer = 20
+	orient2hud()
+	return
+
+/obj/storage/proc/reset() // Deletes the contents of the storage container.
+	for (var/obj/A in src)
+		del(A)
+	return
 
 /obj/storage/Destroy(var/drop_contents = 0)
 	for(var/obj/I in src)
@@ -185,11 +203,10 @@
 	//Numbered contents display
 	var/list/datum/numbered_display/numbered_contents
 
-	//var/mob/living/carbon/human/H = user
 	var/row_num = 0
-	var/col_count = min(9, max(5,contents.len)) -1
-	if (adjusted_contents > 9)
-		row_num = round((adjusted_contents-1) / 9) // 9 is the maximum allowed width.
+	var/col_count = min(7, contents.len) -1
+	if (adjusted_contents > 7)
+		row_num = round((adjusted_contents-1) / 7) // 7 is the maximum allowed width.
 	src.standard_orient_objs(row_num, col_count, numbered_contents)
 	return
 
@@ -200,7 +217,7 @@
 
 	if(src.loc == W)
 		return 0 //Means the storage item is the item itself.
-	if(contents.len >= 36)
+	if(contents.len >= 35)
 		if(!stop_messages)
 			usr << "<span class='notice'>[src] is full, make some space.</span>"
 		return 0 //Storage item is full
@@ -221,8 +238,8 @@
 			usr << "<span class='notice'>[W] is too big for this [src].</span>"
 		return 0
 
-	var/sum_w_class = volume + 3**W.w_class
-	if(sum_w_class >= max_volume)
+	var/sum_w_class = total_volume()+(3**W.w_class)-1
+	if(sum_w_class > max_volume)
 		usr << "<span class='notice'>There is not enough room for [W], make some space.</span>"
 
 	return 1
@@ -230,7 +247,7 @@
 //This proc handles items being inserted. It does not perform any checks of whether an item can or can't be inserted. That's done by can_be_inserted()
 //The stop_warning parameter will stop the insertion message from being displayed. It is intended for cases where you are inserting multiple items at once,
 //such as when picking up all the items on a tile with one click.
-/obj/storage/proc/handle_item_insertion(obj/W as obj, prevent_warning = 0)
+/obj/storage/proc/insert(obj/W as obj, prevent_warning = 0)
 	if(!istype(W)) return 0
 	if(usr)
 		usr.u_equip(W)
@@ -256,8 +273,14 @@
 		if(usr.s_active)
 			usr.s_active.show_to(usr)
 	update_icon()
-	volume += 3**W.w_class
 	return 1
+
+/obj/storage/proc/total_volume()
+	var/vol = 0
+	for(var/obj/W in src)
+		vol += (3**W.w_class)-1
+	return vol
+
 
 //Call this proc to handle the removal of an item from the storage item. The item will be moved to the atom sent as new_target
 /obj/storage/proc/remove_from_storage(obj/W as obj, atom/new_location)
@@ -278,7 +301,7 @@
 			if (!N.can_be_inserted(W))
 				new_location = get_turf(src)
 			else
-				N.handle_item_insertion(W)
+				N.insert(W)
 		else
 			W.layer = initial(W.layer)
 		W.loc = new_location
@@ -307,21 +330,7 @@
 		return
 
 	W.add_fingerprint(user)
-	return handle_item_insertion(W)
-
-/obj/storage/New()
-	src.boxes = new /obj/screen/storage(  )
-	src.boxes.name = "storage"
-	src.boxes.master = src
-	src.boxes.icon_state = "block"
-	src.boxes.screen_loc = "7,7 to 10,8"
-	src.boxes.layer = 19
-	src.closer = new /obj/screen/close(  )
-	src.closer.master = src
-	src.closer.icon_state = "x"
-	src.closer.layer = 20
-	orient2hud()
-	return
+	return insert(W)
 
 /obj/storage/emp_act(severity)
 	for(var/obj/A in src)

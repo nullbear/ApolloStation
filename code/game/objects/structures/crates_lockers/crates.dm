@@ -351,8 +351,8 @@
 
 /obj/structure/closet/crate/freezer/rations/New()
 	..()
-	new /obj/item/weapon/storage/box/donkpockets(src)
-	new /obj/item/weapon/storage/box/donkpockets(src)
+	new /obj/item/storage/box/donkpockets(src)
+	new /obj/item/storage/box/donkpockets(src)
 
 /obj/structure/closet/crate/bin
 	name = "large bin"

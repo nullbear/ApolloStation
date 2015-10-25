@@ -19,7 +19,7 @@
 	desc = "A sterile mask designed to help prevent the spread of diseases."
 	icon_state = "sterile"
 	item_state = "sterile"
-	w_class = 2
+	w_class = 1.0
 	flags = MASKCOVERSMOUTH
 	body_parts_covered = 0
 	gas_transfer_coefficient = 0.90

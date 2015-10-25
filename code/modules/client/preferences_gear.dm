@@ -811,7 +811,7 @@ var/global/list/gear_datums = list()
 
 /datum/gear/matchbook
 	display_name = "matchbook"
-	path = /obj/item/weapon/storage/box/matches
+	path = /obj/item/storage/box/matches
 	sort_category = "misc"
 	cost = 2
 

@@ -217,7 +217,7 @@ var/global/list/turf/synd_spawn = list()
 	if(synd_mob.backbag == 2) synd_mob.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack(synd_mob), slot_back)
 	if(synd_mob.backbag == 3) synd_mob.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_norm(synd_mob), slot_back)
 	if(synd_mob.backbag == 4) synd_mob.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel(synd_mob), slot_back)
-	synd_mob.equip_to_slot_or_qdel(new /obj/item/weapon/storage/box/engineer(synd_mob.back), slot_in_backpack)
+	synd_mob.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(synd_mob.back), slot_in_backpack)
 	synd_mob.equip_to_slot_or_qdel(new /obj/item/weapon/reagent_containers/pill/cyanide(synd_mob), slot_in_backpack)
 
 	synd_mob.update_icons()
