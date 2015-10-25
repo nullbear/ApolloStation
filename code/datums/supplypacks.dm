@@ -392,9 +392,9 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/bodybag
 	name = "Body bag crate"
-	contains = list(/obj/item/weapon/storage/box/bodybags,
-                    /obj/item/weapon/storage/box/bodybags,
-                    /obj/item/weapon/storage/box/bodybags)
+	contains = list(/obj/item/storage/box/bodybags,
+                    /obj/item/storage/box/bodybags,
+                    /obj/item/storage/box/bodybags)
 	cost = 10
 	containertype = /obj/structure/closet/crate/medical
 	containername = "Body bag crate"

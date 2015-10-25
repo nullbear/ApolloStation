@@ -238,7 +238,7 @@
 			usr << "<span class='notice'>[W] is too big for this [src].</span>"
 		return 0
 
-	var/sum_w_class = total_volume()+(3**W.w_class)-1
+	var/sum_w_class = total_volume()+(3**W.w_class)-W.w_class
 	if(sum_w_class > max_volume)
 		usr << "<span class='notice'>There is not enough room for [W], make some space.</span>"
 
@@ -278,7 +278,7 @@
 /obj/storage/proc/total_volume()
 	var/vol = 0
 	for(var/obj/W in src)
-		vol += (3**W.w_class)-1
+		vol += (3**W.w_class)-W.w_class
 	return vol
 
 
