@@ -15,9 +15,9 @@
 	equip(var/mob/living/carbon/human/H)
 		if(!H)	return 0
 		switch(H.backbag)
-			if(2) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack(H), slot_back)
-			if(3) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_norm(H), slot_back)
-			if(4) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+			if(2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack(H), slot_back)
+			if(3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_norm(H), slot_back)
+			if(4) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel(H), slot_back)
 		H.equip_to_slot_or_qdel(new /obj/item/device/radio/headset/headset_service(H), slot_l_ear)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/black(H), slot_shoes)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/under/rank/bartender(H), slot_w_uniform)
@@ -81,9 +81,9 @@
 			H.equip_to_slot_or_qdel(new /obj/item/device/pda/botanist(H), slot_belt)
 			switch(H.backbag)
 				if(1) H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
-				if(2) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/hydroponics(H), slot_back)
-				if(3) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_hyd(H), slot_back)
-				if(4) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+				if(2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/hydroponics(H), slot_back)
+				if(3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_hyd(H), slot_back)
+				if(4) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel(H), slot_back)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
 			return 1
 
@@ -197,9 +197,9 @@
 		if(!H)	return 0
 		H.equip_to_slot_or_qdel(new /obj/item/device/radio/headset/headset_cargo (H), slot_l_ear)
 		switch(H.backbag)
-			if(2) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/industrial(H), slot_back)
-			if(3) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_eng(H), slot_back)
-			if(4) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+			if(2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/industrial(H), slot_back)
+			if(3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_eng(H), slot_back)
+			if(4) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel(H), slot_back)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/under/rank/miner(H), slot_w_uniform)
 		H.equip_to_slot_or_qdel(new /obj/item/device/pda/shaftminer(H), slot_belt)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/black(H), slot_shoes)
@@ -305,8 +305,8 @@
 	equip(var/mob/living/carbon/human/H)
 		if(!H)	return 0
 		if(H.job == "Jester")
-			if(H.backbag == 2) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack(H), slot_back)
-			if(H.backbag == 3) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_norm(H), slot_back)
+			if(H.backbag == 2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack(H), slot_back)
+			if(H.backbag == 3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_norm(H), slot_back)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/under/jester(H), slot_w_uniform)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/jester(H), slot_shoes)
@@ -321,8 +321,8 @@
 			H.mutations.Add(CLUMSY)
 			return 1
 		else if(H.job == "Mime")
-			if(H.backbag == 2) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack(H), slot_back)
-			if(H.backbag == 3) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_norm(H), slot_back)
+			if(H.backbag == 2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack(H), slot_back)
+			if(H.backbag == 3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_norm(H), slot_back)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/under/mime(H), slot_w_uniform)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/black(H), slot_shoes)
 			H.equip_to_slot_or_qdel(new /obj/item/device/pda/mime(H), slot_belt)
@@ -345,8 +345,8 @@
 			H.miming = 1
 			return 1
 		else
-			if(H.backbag == 2) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack(H), slot_back)
-			if(H.backbag == 3) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_norm(H), slot_back)
+			if(H.backbag == 2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack(H), slot_back)
+			if(H.backbag == 3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_norm(H), slot_back)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/under/entertainer(H), slot_w_uniform)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/black(H), slot_shoes)
 			H.equip_to_slot_or_qdel(new /obj/item/device/pda/mime(H), slot_belt)
@@ -432,9 +432,9 @@
 		if(!H)	return 0
 		H.equip_to_slot_or_qdel(new /obj/item/device/radio/headset/headset_sec(H), slot_l_ear)
 		switch(H.backbag)
-			if(2) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack(H), slot_back)
-			if(3) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel_norm(H), slot_back)
-			if(4) H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/satchel(H), slot_back)
+			if(2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack(H), slot_back)
+			if(3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_norm(H), slot_back)
+			if(4) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel(H), slot_back)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/under/rank/internalaffairs(H), slot_w_uniform)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/suit/storage/toggle/internalaffairs(H), slot_wear_suit)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/brown(H), slot_shoes)

@@ -208,7 +208,7 @@
 //**********************
 //**Chameleon Backpack**
 //**********************
-/obj/item/weapon/storage/backpack/chameleon
+/obj/item/storage/backpack/chameleon
 	name = "backpack"
 	icon_state = "backpack"
 	item_state = "backpack"
@@ -218,8 +218,8 @@
 
 	New()
 		..()
-		var/blocked = list(/obj/item/weapon/storage/backpack/chameleon, /obj/item/weapon/storage/backpack/satchel/withwallet)
-		for(var/U in typesof(/obj/item/weapon/storage/backpack)-blocked)//Prevent infinite loops and bad backpacks.
+		var/blocked = list(/obj/item/storage/backpack/chameleon, /obj/item/storage/backpack/satchel/withwallet)
+		for(var/U in typesof(/obj/item/storage/backpack)-blocked)//Prevent infinite loops and bad backpacks.
 			var/obj/item/weapon/storage/backpack/V = new U
 			src.clothing_choices[V.name] = U
 		return

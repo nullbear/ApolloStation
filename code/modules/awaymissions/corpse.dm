@@ -140,7 +140,7 @@
 	corpseradio = /obj/item/device/radio/headset/headset_med
 	corpseuniform = /obj/item/clothing/under/rank/medical
 	corpsesuit = /obj/item/clothing/suit/storage/toggle/labcoat
-	corpseback = /obj/item/weapon/storage/backpack/medic
+	corpseback = /obj/item/storage/backpack/medic
 	corpsepocket1 = /obj/item/device/flashlight/pen
 	corpseshoes = /obj/item/clothing/shoes/black
 	corpseid = 1
@@ -151,7 +151,7 @@
 	name = "Engineer"
 	corpseradio = /obj/item/device/radio/headset/headset_eng
 	corpseuniform = /obj/item/clothing/under/rank/engineer
-	corpseback = /obj/item/weapon/storage/backpack/industrial
+	corpseback = /obj/item/storage/backpack/industrial
 	corpseshoes = /obj/item/clothing/shoes/orange
 	corpsebelt = /obj/item/weapon/storage/belt/utility/full
 	corpsegloves = /obj/item/clothing/gloves/yellow
@@ -172,7 +172,7 @@
 	corpseradio = /obj/item/device/radio/headset
 	corpsemask = /obj/item/clothing/mask/gas/clown_hat
 	corpsepocket1 = /obj/item/weapon/bikehorn
-	corpseback = /obj/item/weapon/storage/backpack/clown
+	corpseback = /obj/item/storage/backpack/clown
 	corpseid = 1
 	corpseidjob = "Clown"
 	corpseidaccess = "Clown"
@@ -192,7 +192,7 @@
 	corpseradio = /obj/item/device/radio/headset/headset_cargo
 	corpseuniform = /obj/item/clothing/under/rank/miner
 	corpsegloves = /obj/item/clothing/gloves/black
-	corpseback = /obj/item/weapon/storage/backpack/industrial
+	corpseback = /obj/item/storage/backpack/industrial
 	corpseshoes = /obj/item/clothing/shoes/black
 	corpseid = 1
 	corpseidjob = "Shaft Miner"

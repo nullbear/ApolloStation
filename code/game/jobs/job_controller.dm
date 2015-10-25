@@ -475,11 +475,11 @@ var/global/datum/controller/occupations/job_master
 							new /obj/item/storage/box/survival(BPK)
 							H.equip_to_slot_or_qdel(BPK, slot_back,1)
 						if(3)
-							var/obj/item/weapon/storage/backpack/BPK = new/obj/item/weapon/storage/backpack/satchel_norm(H)
+							var/obj/item/storage/backpack/BPK = new/obj/item/storage/backpack/satchel_norm(H)
 							new /obj/item/storage/box/survival(BPK)
 							H.equip_to_slot_or_qdel(BPK, slot_back,1)
 						if(4)
-							var/obj/item/weapon/storage/backpack/BPK = new/obj/item/weapon/storage/backpack/satchel(H)
+							var/obj/item/storage/backpack/BPK = new/obj/item/storage/backpack/satchel(H)
 							new /obj/item/storage/box/survival(BPK)
 							H.equip_to_slot_or_qdel(BPK, slot_back,1)
 

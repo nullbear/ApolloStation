@@ -763,7 +763,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	equip_to_slot_or_qdel(new /obj/item/clothing/head/roman/fluff(src), slot_head)
 
 	//Backpack
-	equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/cultpack(src), slot_back)
+	equip_to_slot_or_qdel(new /obj/item/storage/backpack/cultpack(src), slot_back)
 	equip_to_slot_or_qdel(new /obj/item/weapon/storage/firstaid/regular(src), slot_in_backpack)
 
 	return 1

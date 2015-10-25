@@ -137,7 +137,7 @@ var/global/sent_strike_team = 0
 	equip_to_slot_or_qdel(new /obj/item/clothing/mask/gas/swat(src), slot_wear_mask)
 	equip_to_slot_or_qdel(new /obj/item/clothing/glasses/thermal(src), slot_glasses)
 
-	equip_to_slot_or_qdel(new /obj/item/weapon/storage/backpack/security(src), slot_back)
+	equip_to_slot_or_qdel(new /obj/item/storage/backpack/security(src), slot_back)
 	equip_to_slot_or_qdel(new /obj/item/weapon/storage/box(src), slot_in_backpack)
 
 	equip_to_slot_or_qdel(new /obj/item/ammo_magazine/a357(src), slot_in_backpack)
