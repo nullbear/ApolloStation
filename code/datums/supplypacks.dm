@@ -365,11 +365,11 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/medical
 	name = "Medical crate"
-	contains = list(/obj/item/weapon/storage/firstaid/regular,
-					/obj/item/weapon/storage/firstaid/fire,
-					/obj/item/weapon/storage/firstaid/toxin,
-					/obj/item/weapon/storage/firstaid/o2,
-					/obj/item/weapon/storage/firstaid/adv,
+	contains = list(/obj/item/storage/firstaid/regular,
+					/obj/item/storage/firstaid/fire,
+					/obj/item/storage/firstaid/toxin,
+					/obj/item/storage/firstaid/o2,
+					/obj/item/storage/firstaid/adv,
 					/obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
 					/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline,
 					/obj/item/weapon/reagent_containers/glass/bottle/stoxin,

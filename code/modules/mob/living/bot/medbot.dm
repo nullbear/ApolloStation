@@ -303,11 +303,11 @@
 		return
 
 	var/obj/item/weapon/firstaid_arm_assembly/A = new /obj/item/weapon/firstaid_arm_assembly
-	if(istype(src, /obj/item/weapon/storage/firstaid/fire))
+	if(istype(src, /obj/item/storage/firstaid/fire))
 		A.skin = "ointment"
-	else if(istype(src, /obj/item/weapon/storage/firstaid/toxin))
+	else if(istype(src, /obj/item/storage/firstaid/toxin))
 		A.skin = "tox"
-	else if(istype(src, /obj/item/weapon/storage/firstaid/o2))
+	else if(istype(src, /obj/item/storage/firstaid/o2))
 		A.skin = "o2"
 
 	qdel(S)

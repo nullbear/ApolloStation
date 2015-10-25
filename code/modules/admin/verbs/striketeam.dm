@@ -141,7 +141,7 @@ var/global/sent_strike_team = 0
 	equip_to_slot_or_qdel(new /obj/item/weapon/storage/box(src), slot_in_backpack)
 
 	equip_to_slot_or_qdel(new /obj/item/ammo_magazine/a357(src), slot_in_backpack)
-	equip_to_slot_or_qdel(new /obj/item/weapon/storage/firstaid/regular(src), slot_in_backpack)
+	equip_to_slot_or_qdel(new /obj/item/storage/firstaid/regular(src), slot_in_backpack)
 	equip_to_slot_or_qdel(new /obj/item/storage/box/flashbangs(src), slot_in_backpack)
 	equip_to_slot_or_qdel(new /obj/item/device/flashlight(src), slot_in_backpack)
 	if (!leader_selected)
