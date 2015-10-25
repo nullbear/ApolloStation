@@ -65,7 +65,7 @@
 		/obj/item/storage/wallet,
 		/obj/item/weapon/storage/photo_album,
 		/obj/item/storage/box/snappops,
-		/obj/item/weapon/storage/fancy/crayons,
+		/obj/item/storage/fancy/crayons,
 		/obj/item/storage/backpack/holding,
 		/obj/item/storage/belt/champion,
 		/obj/item/weapon/soap/deluxe,

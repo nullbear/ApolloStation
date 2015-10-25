@@ -189,7 +189,7 @@
 		var/obj/item/I = new being_built.build_path
 
 		if( being_built.locked )
-			var/obj/item/weapon/storage/lockbox/L = new/obj/item/weapon/storage/lockbox(exit)
+			var/obj/item/storage/lockbox/L = new/obj/item/storage/lockbox(exit)
 			L.name += " ([I.name])"
 
 		I.Move(exit)

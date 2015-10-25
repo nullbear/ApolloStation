@@ -83,8 +83,8 @@
 	new /obj/item/clothing/suit/holidaypriest(src)
 	new /obj/item/clothing/under/wedding/bride_white(src)
 	new /obj/item/storage/backpack/cultpack (src)
-	new /obj/item/weapon/storage/fancy/candle_box(src)
-	new /obj/item/weapon/storage/fancy/candle_box(src)
+	new /obj/item/storage/fancy/candle_box(src)
+	new /obj/item/storage/fancy/candle_box(src)
 	return
 
 

@@ -159,7 +159,7 @@
 "dc" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/plating,/area/basement/civilian/dancefloor)
 "dd" = (/obj/machinery/atmospherics/unary/vent_pump/on,/obj/machinery/light/small{dir = 8},/turf/simulated/floor{icon_state = "floorgrime"},/area/basement/civilian/dancefloor)
 "de" = (/turf/simulated/floor{icon_state = "L1"},/area/basement/civilian/dancefloor)
-"df" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/table/reinforced,/obj/machinery/door/firedoor,/obj/item/device/radio/intercom{broadcasting = 0; listening = 1; name = "Station Intercom (General)"; pixel_y = 20},/obj/item/weapon/storage/fancy/cigarettes/dromedaryco,/turf/simulated/floor{icon_state = "floorgrime"},/area/basement/civilian/dancefloor)
+"df" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/table/reinforced,/obj/machinery/door/firedoor,/obj/item/device/radio/intercom{broadcasting = 0; listening = 1; name = "Station Intercom (General)"; pixel_y = 20},/obj/item/storage/fancy/cigarettes/dromedaryco,/turf/simulated/floor{icon_state = "floorgrime"},/area/basement/civilian/dancefloor)
 "dg" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor{dir = 5; icon_state = "light_on-c"},/area/basement/civilian/dancefloor)
 "dh" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor{icon_state = "dark"},/area/basement/civilian/dancefloor)
 "di" = (/turf/simulated/floor{icon_state = "dark"},/area/basement/civilian/dancefloor)

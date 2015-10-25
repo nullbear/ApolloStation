@@ -72,7 +72,7 @@
 	// List of devices that cost a use to emag.
 	var/list/devices = list(
 		/obj/item/robot_parts,
-		/obj/item/weapon/storage/lockbox,
+		/obj/item/storage/lockbox,
 		/obj/item/weapon/storage/secure,
 		/obj/item/weapon/circuitboard,
 		/obj/item/weapon/rig,

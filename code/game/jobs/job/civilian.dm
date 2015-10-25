@@ -312,7 +312,7 @@
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/jester(H), slot_shoes)
 			H.equip_to_slot_or_qdel(new /obj/item/device/pda/clown(H), slot_belt)
 			H.equip_to_slot_or_qdel(new /obj/item/toy/crayon/rainbow(H), slot_in_backpack)
-			H.equip_to_slot_or_qdel(new /obj/item/weapon/storage/fancy/crayons(H), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/fancy/crayons(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/head/jesterhat(H), slot_head)
 			if(H.backbag == 1)
 				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)

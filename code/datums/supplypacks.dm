@@ -49,7 +49,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 					/obj/item/weapon/reagent_containers/food/snacks/flour,
 					/obj/item/weapon/reagent_containers/food/drinks/milk,
 					/obj/item/weapon/reagent_containers/food/drinks/milk,
-					/obj/item/weapon/storage/fancy/egg_box,
+					/obj/item/storage/fancy/egg_box,
 					/obj/item/weapon/reagent_containers/food/snacks/tofu,
 					/obj/item/weapon/reagent_containers/food/snacks/tofu,
 					/obj/item/weapon/reagent_containers/food/snacks/meat,
@@ -123,7 +123,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 					/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/patron,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/goldschlager,
-					/obj/item/weapon/storage/fancy/cigarettes/dromedaryco,
+					/obj/item/storage/fancy/cigarettes/dromedaryco,
 					/obj/item/weapon/lipstick/random,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/ale,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/ale,
@@ -437,9 +437,9 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 /datum/supply_packs/virologysupplies
 	name = "Virology supplies"
 	contains = list(/obj/item/device/antibody_scanner,
-		/obj/item/weapon/storage/fancy/vials,
-		/obj/item/weapon/storage/fancy/vials,
-		/obj/item/weapon/storage/lockbox/vials)
+		/obj/item/storage/fancy/vials,
+		/obj/item/storage/fancy/vials,
+		/obj/item/storage/lockbox/vials)
 	cost = 15
 	containertype = "/obj/structure/closet/crate"
 	containername = "Virology supplies crate"
@@ -900,7 +900,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/artscrafts
 	name = "Arts and Crafts supplies"
-	contains = list(/obj/item/weapon/storage/fancy/crayons,
+	contains = list(/obj/item/storage/fancy/crayons,
 	/obj/item/device/camera,
 	/obj/item/device/camera_film,
 	/obj/item/device/camera_film,
