@@ -59,8 +59,8 @@ var/global/vox_tick = 1
 	C.assignment = "Trader"
 	C.registered_name = real_name
 	C.registered_user = src
-	var/obj/item/weapon/storage/wallet/W = new(src)
-	W.handle_item_insertion(C)
+	var/obj/item/storage/wallet/W = new(src)
+	W.storage.insert(C)
 	spawn_money(rand(50,150)*10,W)
 	equip_to_slot_or_qdel(W, slot_wear_id)
 	vox_tick++

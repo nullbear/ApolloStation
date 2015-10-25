@@ -62,7 +62,7 @@
 
 /obj/item/weapon/a_gift/attack_self(mob/M as mob)
 	var/gift_type = pick(/obj/item/weapon/sord,
-		/obj/item/weapon/storage/wallet,
+		/obj/item/storage/wallet,
 		/obj/item/weapon/storage/photo_album,
 		/obj/item/storage/box/snappops,
 		/obj/item/weapon/storage/fancy/crayons,

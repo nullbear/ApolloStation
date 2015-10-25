@@ -154,7 +154,7 @@
 /obj/item/storage/backpack/satchel/withwallet
 	New()
 		..()
-		new /obj/item/weapon/storage/wallet/random(storage)
+		new /obj/item/storage/wallet/random(storage)
 
 /obj/item/storage/backpack/satchel_norm
 	name = "satchel"
