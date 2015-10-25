@@ -102,4 +102,11 @@
 	return storage.insert(W)
 
 /obj/item/storage/hear_talk(mob/M as mob, text, verb, datum/language/speaking)
-	storage.hear_talk(M, text, verb, speaking)
+	for(var/obj/O in storage)
+		O.hear_talk(M, text, verb, speaking)
+	return
+
+/obj/item/storage/emp_act(severity)
+	for(var/obj/O in storage)
+		O.emp_act(severity)
+	return
