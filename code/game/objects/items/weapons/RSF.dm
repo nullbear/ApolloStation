@@ -96,7 +96,7 @@ RSF
 			product = new /obj/item/weapon/pen()
 			used_energy = 50
 		if(5)
-			product = new /obj/item/weapon/storage/pill_bottle/dice()
+			product = new /obj/item/storage/pill_bottle/dice()
 			used_energy = 200
 		if(6)
 			product = new /obj/item/clothing/mask/cigarette()

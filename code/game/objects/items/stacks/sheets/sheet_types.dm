@@ -185,8 +185,8 @@ var/global/list/datum/stack_recipe/wood_recipes = list ( \
  * Cardboard
  */
 var/global/list/datum/stack_recipe/cardboard_recipes = list ( \
-	new/datum/stack_recipe("box", /obj/item/weapon/storage/box), \
-	new/datum/stack_recipe("donut box", /obj/item/weapon/storage/donut_box/empty), \
+	new/datum/stack_recipe("box", /obj/item/storage/box), \
+	new/datum/stack_recipe("donut box", /obj/item/storage/box/donut_box/empty), \
 	new/datum/stack_recipe("egg box", /obj/item/weapon/storage/fancy/egg_box), \
 	new/datum/stack_recipe("light tubes", /obj/item/storage/box/lights/tubes), \
 	new/datum/stack_recipe("light bulbs", /obj/item/storage/box/lights/bulbs), \

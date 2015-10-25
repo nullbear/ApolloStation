@@ -56,6 +56,7 @@
 	name = "storage container"
 	desc = "a container for storing objects inside of another object."
 
+	var/updates_icon = 0 // Whether the container should update it's icon when objects are interacted with.
 	var/max_size = 3.0 // The maximum size of an object that can be placed within the container.
 	var/max_volume = 21 // The total volume of objects that can be placed inside the container.
 	var/whitelist = 1	// Whether the hold_list is a whitelist, or a blacklist.
@@ -273,6 +274,9 @@
 		if(usr.s_active)
 			usr.s_active.show_to(usr)
 	update_icon()
+	if(updates_icon && istype(loc, /obj))
+		var/obj/L
+		L.update_icon()
 	return 1
 
 /obj/storage/proc/total_volume()
@@ -316,6 +320,9 @@
 		W.maptext = ""
 	W.on_exit_storage(src)
 	update_icon()
+	if(updates_icon && istype(loc, /obj))
+		var/obj/L
+		L.update_icon()
 	return 1
 
 //This proc is called when you want to place an item into the storage item.

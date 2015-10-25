@@ -9,6 +9,7 @@
 
 /obj/item/storage/wallet/New()
 	..()
+	storage.updates_icon = 1
 	storage.hold_list = list(
 		"/obj/item/weapon/spacecash",
 		"/obj/item/weapon/card",
@@ -32,25 +33,13 @@
 	storage.max_size = 1.0
 	storage.max_volume = 8
 
-/obj/item/storage/wallet/attack_hand(mob/user as mob)
-	..()
-	if(front_id)
-		if(!front_id.loc == storage)
-			front_id = null
-			name = initial(name)
-			update_icon()
-
 /obj/item/storage/wallet/attackby(obj/item/W as obj, mob/user as mob)
 	..()
 	if(istype(W, /obj/item/weapon/card/id) && W.loc == storage && !front_id)
 		front_id = W
 		name = "[name] ([front_id])"
 		update_icon()
-	if(front_id)
-		if(!front_id.loc == storage)
-			front_id = null
-			name = initial(name)
-			update_icon()
+
 
 /obj/item/storage/wallet/update_icon()
 
@@ -78,11 +67,6 @@
 
 
 /obj/item/storage/wallet/GetID()
-	if(front_id)
-		if(!front_id.loc == storage)
-			front_id = null
-			name = initial(name)
-			update_icon()
 	return front_id
 
 /obj/item/storage/wallet/GetAccess()

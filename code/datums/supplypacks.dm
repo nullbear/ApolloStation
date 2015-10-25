@@ -1247,7 +1247,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 					/obj/item/clothing/head/helmet/tactical,
 					/obj/item/clothing/mask/balaclava/tactical,
 					/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-					/obj/item/weapon/storage/belt/security/tactical,
+					/obj/item/storage/belt/security/tactical,
 					/obj/item/clothing/shoes/jackboots,
 					/obj/item/clothing/gloves/black,
 					/obj/item/clothing/under/tactical,
@@ -1255,7 +1255,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 					/obj/item/clothing/head/helmet/tactical,
 					/obj/item/clothing/mask/balaclava/tactical,
 					/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-					/obj/item/weapon/storage/belt/security/tactical,
+					/obj/item/storage/belt/security/tactical,
 					/obj/item/clothing/shoes/jackboots,
 					/obj/item/clothing/gloves/black,
 					/obj/item/clothing/under/tactical,
@@ -1263,7 +1263,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 					/obj/item/clothing/head/helmet/tactical,
 					/obj/item/clothing/mask/balaclava/tactical,
 					/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-					/obj/item/weapon/storage/belt/security/tactical,
+					/obj/item/storage/belt/security/tactical,
 					/obj/item/clothing/shoes/jackboots,
 					/obj/item/clothing/gloves/black)
 
