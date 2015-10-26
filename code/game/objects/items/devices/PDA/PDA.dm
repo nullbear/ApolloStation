@@ -1395,18 +1395,18 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 	New()
 		..()
-		new /obj/item/device/pda(src)
-		new /obj/item/device/pda(src)
-		new /obj/item/device/pda(src)
-		new /obj/item/device/pda(src)
-		new /obj/item/weapon/cartridge/head(src)
+		new /obj/item/device/pda(storage)
+		new /obj/item/device/pda(storage)
+		new /obj/item/device/pda(storage)
+		new /obj/item/device/pda(storage)
+		new /obj/item/weapon/cartridge/head(storage)
 
 		var/newcart = pick(	/obj/item/weapon/cartridge/engineering,
 							/obj/item/weapon/cartridge/security,
 							/obj/item/weapon/cartridge/medical,
 							/obj/item/weapon/cartridge/signal/science,
 							/obj/item/weapon/cartridge/quartermaster)
-		new newcart(src)
+		new newcart(storage)
 
 // Pass along the pulse to atoms in contents, largely added so pAIs are vulnerable to EMP
 /obj/item/device/pda/emp_act(severity)

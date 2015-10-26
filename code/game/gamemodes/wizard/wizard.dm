@@ -168,8 +168,9 @@
 	if(wizard_mob.backbag == 2) wizard_mob.equip_to_slot_or_qdel(new /obj/item/storage/backpack(wizard_mob), slot_back)
 	if(wizard_mob.backbag == 3) wizard_mob.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_norm(wizard_mob), slot_back)
 	if(wizard_mob.backbag == 4) wizard_mob.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel(wizard_mob), slot_back)
-	wizard_mob.equip_to_slot_or_qdel(new /obj/item/storage/box(wizard_mob), slot_in_backpack)
-//	wizard_mob.equip_to_slot_or_qdel(new /obj/item/weapon/scrying_gem(wizard_mob), slot_l_store) For scrying gem.
+	if(istype(wizard_mob.back, /obj/item/storage))
+		wizard_mob.equip_to_slot_or_qdel(new /obj/item/storage/box(wizard_mob), slot_in_backpack)
+//		wizard_mob.equip_to_slot_or_qdel(new /obj/item/weapon/scrying_gem(wizard_mob), slot_l_store) For scrying gem.
 	wizard_mob.equip_to_slot_or_qdel(new /obj/item/weapon/teleportation_scroll(wizard_mob), slot_r_store)
 	wizard_mob.equip_to_slot_or_qdel(new /obj/item/weapon/spellbook(wizard_mob), slot_r_hand)
 

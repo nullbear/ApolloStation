@@ -102,7 +102,7 @@
 		var/obj/item/storage/bag/trash/T = I
 		user << "\blue You empty the bag."
 		for(var/obj/item/O in T.storage)
-			T.storage.remove_from_storage(O,src)
+			T.storage.remove(O,src)
 		T.update_icon()
 		update()
 		return

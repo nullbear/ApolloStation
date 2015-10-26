@@ -37,7 +37,7 @@
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/handcuffs(H), slot_l_store)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 		H.implant_loyalty(H)
 		return 1
@@ -75,7 +75,7 @@
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/handcuffs(H), slot_l_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 		return 1
 
@@ -113,7 +113,7 @@
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/evidence(H), slot_l_hand)
 			H.equip_to_slot_or_qdel(new /obj/item/device/detective_scanner(H), slot_r_store)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/evidence(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/device/detective_scanner(H), slot_in_backpack)
 		if(H.mind.role_alt_title && H.mind.role_alt_title == "Forensic Technician")
@@ -153,6 +153,6 @@
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/handcuffs(H), slot_l_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/handcuffs(H), slot_in_backpack)
 		return 1

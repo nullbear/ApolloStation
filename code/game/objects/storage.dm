@@ -65,7 +65,7 @@
 
 	var/updates_icon = 0 // Whether the container should update it's icon when objects are interacted with.
 	var/min_slots = 7	// The amount of slots that will always show for this object, even when empty.
-	var/max_slots = 35 // The hard limit to the amount of slots in a container. This will prevent new items being added even if there is volumetric space.
+	var/max_slots = 0 // The hard limit to the amount of slots in a container. This will prevent new items being added even if there is volumetric space. 0 Allows for infinite items.
 	var/max_size = 3.0 // The maximum size of an object that can be placed within the container.
 	var/max_volume = 21 // The total volume of objects that can be placed inside the container.
 	var/whitelist = 1	// Whether the hold_list is a whitelist, or a blacklist.
@@ -179,7 +179,7 @@
 	return
 
 //This proc draws out the inventory and places the items on it. It uses the standard position.
-/obj/storage/proc/standard_orient_objs(var/rows, var/cols, var/list/obj/display_contents)
+/obj/storage/proc/standard_orient_objs(var/rows, var/cols)
 	var/cx = 4
 	var/cy = 2+rows
 	src.boxes.screen_loc = "4:16,2:16 to [4+cols]:16,[2+rows]:16"
@@ -195,29 +195,19 @@
 	src.closer.screen_loc = "[4+cols+1]:16,2:16"
 	return
 
-/datum/numbered_display
-	var/obj/sample_object
-	var/number
-
-	New(obj/sample as obj)
-		if(!istype(sample))
-			qdel(src)
-		sample_object = sample
-		number = 1
-
 //This proc determins the size of the inventory to be displayed. Please touch it only if you know what you're doing.
 /obj/storage/proc/orient2hud(mob/user as mob)
 
 	var/adjusted_contents = contents.len
 
-	//Numbered contents display
-	var/list/datum/numbered_display/numbered_contents
-
 	var/row_num = 0
-	var/col_count = min(7, contents.len) -1
+	var/col_count = min(7, max(contents.len+1, min_slots)) -1
 	if (adjusted_contents > 7)
-		row_num = round((adjusted_contents-1) / 7) // 7 is the maximum allowed width.
-	src.standard_orient_objs(row_num, col_count, numbered_contents)
+		if(max_slots > adjusted_contents) // Always make sure there is room to put another item, unless the bag has no more slots available.
+			row_num = round((adjusted_contents) / 7) // 7 is the maximum allowed width.
+		else
+			row_num = round((adjusted_contents-1) / 7) // 7 is the maximum allowed width.
+	src.standard_orient_objs(row_num, col_count)
 	return
 
 //This proc return 1 if the item can be picked up and 0 if it can't.
@@ -227,7 +217,7 @@
 
 	if(src.loc == W)
 		return 0 //Means the storage item is the item itself.
-	if(contents.len >= min(max_slots, 49))
+	if(max_slots && contents.len >= max_slots) // If the storage object has a maximum limit on slots, and the contents are equal or greater than it, reject a new item.
 		if(!stop_messages)
 			usr << "<span class='notice'>[loc.name] is full, make some space.</span>"
 		return 0 //Storage item is full
@@ -357,9 +347,9 @@
 	for (var/obj/A in src)
 		A.hear_talk(M, text, verb, speaking)
 
-/atom/proc/storage_depth()
+/atom/proc/storage_depth(var/atom/A)
 	var/depth = 0
-	var/cur_atom = src
+	var/atom/cur_atom = A
 	while (!istype(cur_atom, /area))
 		if (istype(cur_atom.loc, /obj/storage))
 			depth += 1
@@ -374,7 +364,7 @@
 
 /atom/proc/storage_depth_turf()
 	var/depth = 0
-	var/cur_atom = src
+	var/atom/cur_atom = src
 	while (!istype(cur_atom, /turf))
 		if (istype(cur_atom.loc, /obj/storage))
 			depth += 1

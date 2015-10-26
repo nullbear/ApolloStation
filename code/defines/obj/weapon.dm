@@ -444,6 +444,8 @@
 		..()
 		storage.max_size = 2
 		storage.max_volume = 80
+		storage.min_slots = 1
+		storage.max_slots = 35
 		storage.hold_list = list("/obj/item/weapon/stock_parts")
 
 /obj/item/storage/part_replacer/proc/play_rped_sound()

@@ -9,8 +9,10 @@
 	var/deity_name = "Christ"
 
 /obj/item/storage/bible/New()
+	..()
+	storage.max_slots = 5
 	storage.max_size = 2.0
-	storage.max_volume = 26
+	storage.max_volume = 25
 
 /obj/item/storage/bible/booze
 	name = "bible"

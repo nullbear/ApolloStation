@@ -422,4 +422,4 @@ Class Procs:
 			W.play_rped_sound()
 		return 1
 	else
-		return 0 */
+		return 0

@@ -15,7 +15,7 @@
 		user.u_equip(W)
 		src.contents += W
 	if (istype(W, /obj/item/storage))
-		var/obj/item/storage/S = W
+		//var/obj/item/storage/S = W
 		//S.hide_from(usr)
 		//for(var/obj/item/weapon/ore/O in S.contents)
 			//S.remove_from_storage(O, src) //This will move the item to this item's contents

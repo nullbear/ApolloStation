@@ -20,10 +20,14 @@
 	var/icon_type = "donut"
 	New()
 		..()
+		storage.max_slots = 6
+		storage.min_slots = 1
+		storage.max_size = 2
+		storage.max_volume = 26
 		storage.updates_icon = 1
 
-/obj/item/storage/fancy/update_icon(var/itemremoved = 0)
-	var/total_contents = storage.contents.len - itemremoved
+/obj/item/storage/fancy/update_icon()
+	var/total_contents = storage.contents.len
 	src.icon_state = "[src.icon_type]box[total_contents]"
 	return
 
@@ -49,10 +53,13 @@
 	icon_state = "eggbox"
 	icon_type = "egg"
 	name = "egg box"
+	w_class = 2.0
 	New()
 		..()
+		storage.max_slots = 12
+		storage.min_slots = 12
 		storage.max_size = 1
-		storage.max_volume = 24
+		storage.max_volume = 26
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/food/snacks/egg")
 		new /obj/item/weapon/reagent_containers/food/snacks/egg(storage)
 		new /obj/item/weapon/reagent_containers/food/snacks/egg(storage)
@@ -81,9 +88,12 @@
 	item_state = "candlebox5"
 	throwforce = 2
 	slot_flags = SLOT_BELT
+	w_class = 2.0
 	New()
 		storage.max_size = 2
-		storage.max_volume = 44
+		storage.max_slots = 5
+		storage.min_slots = 5
+		storage.max_volume = 26
 		storage.hold_list = list("/obj/item/weapon/flame/candle")
 		new /obj/item/weapon/flame/candle(storage)
 		new /obj/item/weapon/flame/candle(storage)
@@ -105,6 +115,8 @@
 	w_class = 2.0
 	New()
 		storage.max_size = 1
+		storage.max_slots = 6
+		storage.min_slots = 6
 		storage.max_volume = 12
 		storage.hold_list = list("/obj/item/toy/crayon")
 		new /obj/item/toy/crayon/red(storage)
@@ -119,7 +131,7 @@
 /obj/item/storage/fancy/crayons/update_icon()
 	overlays = list() //resets list
 	overlays += image('icons/obj/crayons.dmi',"crayonbox")
-	for(var/obj/item/toy/crayon/crayon in storage.contents)
+	for(var/obj/item/toy/crayon/crayon in storage)
 		overlays += image('icons/obj/crayons.dmi',crayon.colourName)
 
 /obj/item/storage/fancy/crayons/attackby(obj/item/W as obj, mob/user as mob)
@@ -149,6 +161,8 @@
 	icon_type = "cigarette"
 	New()
 		storage.max_size = 1
+		storage.max_slots = 7
+		storage.min_slots = 7
 		storage.max_volume = 28
 		storage.hold_list = list("/obj/item/clothing/mask/cigarette")
 		flags |= NOREACT
@@ -159,14 +173,7 @@
 		new cig_type(storage)
 		new cig_type(storage)
 		new cig_type(storage)
-		new cig_type(storage)
-		new cig_type(storage)
-		new cig_type(storage)
-		new cig_type(storage)
-		new cig_type(storage)
-		new cig_type(storage)
-		new cig_type(storage)
-		create_reagents(15 * 14)
+		create_reagents(15 * 7)
 
 /obj/item/storage/fancy/cigarettes/Destroy()
 	qdel(reagents)
@@ -215,6 +222,8 @@
 	New()
 		..()
 		storage.max_size = 1
+		storage.max_slots = 6
+		storage.min_slots = 6
 		storage.max_volume = 12
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/glass/beaker/vial")
 		new /obj/item/weapon/reagent_containers/glass/beaker/vial(storage)
@@ -235,6 +244,8 @@
 		..()
 		storage.updates_icon = 1
 		storage.max_size = 1
+		storage.max_slots = 6
+		storage.min_slots = 6
 		storage.max_volume = 12
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/glass/beaker/vial")
 		new /obj/item/weapon/reagent_containers/glass/beaker/vial(storage)

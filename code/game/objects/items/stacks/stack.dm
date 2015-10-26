@@ -130,7 +130,8 @@
 			S.amount = produced
 
 		if (istype(O, /obj/item/storage)) //BubbleWrap - so newly formed boxes are empty
-			for (var/obj/item/I in O)
+			var/obj/item/storage/OO = O
+			for (var/obj/item/I in OO.storage)
 				qdel(I)
 
 /obj/item/stack/Topic(href, href_list)

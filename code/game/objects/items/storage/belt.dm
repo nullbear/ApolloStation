@@ -10,7 +10,8 @@
 /obj/item/storage/belt/New()
 	..()
 	storage.max_size = 3.0
-	storage.max_volume = 26
+	storage.max_slots = 7 // Maximum of 7 slots, which can each hold an average sized tool.
+	storage.max_volume = 126 // This is set up to allow for a full (7 tools) toolbelt.
 
 /obj/item/storage/belt/utility
 	name = "tool-belt" //Carn: utility belt is nicer, but it bamboozles the text parsing.
@@ -117,6 +118,8 @@
 	item_state = "soulstonebelt"
 	New()
 		..()
+		storage.max_slots = 6 // Less slots for some reason.
+		storage.min_slots = 6
 		storage.hold_list = list("/obj/item/device/soulstone")
 
 /obj/item/storage/belt/soulstone/full
@@ -138,6 +141,8 @@
 		..()
 		storage.max_size = 2
 		storage.max_volume = 8
+		storage.max_slots = 1
+		storage.min_slots = 1
 		storage.hold_list = list("/obj/item/clothing/mask/luchador")
 
 /obj/item/storage/belt/security/tactical
@@ -145,3 +150,6 @@
 	desc = "Can hold security gear like handcuffs and flashes, with more pouches for more storage."
 	icon_state = "swatbelt"
 	item_state = "swatbelt"
+	New()
+		storage.max_slots = 14 // Two rows for equipment. OP as fuck.
+		storage.max_volume = 252 // A massive belt.

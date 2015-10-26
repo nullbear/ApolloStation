@@ -36,7 +36,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H), slot_in_backpack)
 		return 1
 
 
@@ -71,7 +71,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H), slot_in_backpack)
 		return 1
 
 
@@ -103,5 +103,5 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H), slot_in_backpack)
 		return 1

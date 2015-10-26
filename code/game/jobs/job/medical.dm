@@ -31,7 +31,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		return 1
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/suit/storage/toggle/labcoat/cmo(H), slot_wear_suit)
 		H.equip_to_slot_or_qdel(new /obj/item/device/flashlight/pen(H), slot_s_store)
@@ -93,7 +93,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		H.equip_to_slot_or_qdel(new /obj/item/device/pda/medical(H), slot_belt)
 		H.equip_to_slot_or_qdel(new /obj/item/device/flashlight/pen(H), slot_s_store)
 		return 1
@@ -126,7 +126,7 @@
 			if(2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/chemistry(H), slot_back)
 			if(3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_chem(H), slot_back)
 			if(4) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel(H), slot_back)
-		H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+		H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/suit/storage/toggle/labcoat/chemist(H), slot_wear_suit)
 		return 1
 
@@ -224,5 +224,5 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		H.equip_to_slot_or_qdel(new /obj/item/clothing/suit/storage/toggle/labcoat(H), slot_wear_suit)

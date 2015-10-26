@@ -323,8 +323,8 @@
 				equipped = 1
 		if(slot_in_backpack)
 			if (src.back && istype(src.back, /obj/item/storage/backpack))
-				var/obj/item/storage/backpack/B = src.back
-				if(B.contents.len < B.storage_slots && W.w_class <= B.max_w_class)
+				var/obj/item/storage/backpack/B = src
+				if(B.storage.can_be_inserted(W, 1))
 					W.loc = B
 					equipped = 1
 

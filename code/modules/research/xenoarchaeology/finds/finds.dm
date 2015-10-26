@@ -202,13 +202,24 @@
 			if(prob(30))
 				apply_image_decorations = 1
 		if(11)
+			/*
+				** Changed with storage update. This could now get lucky and become a very valuable find, or like, a piece of shit.
+				** Possible outcomes:
+				** Get a normal-ish box. Average.
+				** Get a massive box with a TINY capacity. Fucking terrible.
+				** Get a massive box, with a MASSIVE capacity. Pretty good.
+				** Get a tiny box, with a COLOSSAL capacity. Fucking amazing.
+			*/
 			item_type = "box"
 			new_item = new /obj/item/storage/box(src.loc)
 			new_item.icon = 'icons/obj/xenoarchaeology.dmi'
 			new_item.icon_state = "box"
 			var/obj/item/storage/box/new_box = new_item
-			new_box.max_w_class = pick(1,2,2,3,3,3,4,4)
-			new_box.max_combined_w_class = rand(new_box.max_w_class, new_box.max_w_class * 10)
+			new_box.w_class = pick(1,2,2,3,3,3,4,4,5,6)
+			new_box.storage.max_size = pick(1,2,2,3,3,3,4,4,5,6) // Affects the size of the object placeable inside. Greatly affects capacity. Size 4+ can store backpacks.
+			new_box.storage.max_slots = pick(1,2,3,4,5,6,7,14,21,28,35,42,49) // Affects the number of rows and columns. about a 50% chance for <1 row, and 50% chance for up to 7 rows.
+			new_box.storage.max_volume = (3**new_box.storage.max_size) * (new_box.storage.max_slots) // Capacity is calculated based on previous results.
+			new_box.storage.min_slots = pick(1,new_box.storage.max_slots) // Mostly aesthetic. affects whether the box expands as you put items in, or if it starts massive.
 			if(prob(30))
 				apply_image_decorations = 1
 		if(12)

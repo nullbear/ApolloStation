@@ -65,17 +65,19 @@
 	if(empty_into && !istype(empty_into))
 		empty_into = null
 
-	if(empty_into && empty_into.contents.len >= empty_into.storage_slots)
-		user << "<span class='notice'>\The [empty_into] is full.</span>"
-		return
-
 	while(paperamount)
 		var/obj/item/weapon/shreddedp/SP = get_shredded_paper()
 		if(!SP) break
-		if(empty_into)
-			empty_into.handle_item_insertion(SP)
-			if(empty_into.contents.len >= empty_into.storage_slots)
-				break
+		var/total_transferred = 0
+		if(empty_into && empty_into.storage.can_be_inserted(SP))
+			empty_into.storage.insert(SP)
+			total_transferred += 1
+		else if (total_transferred)
+			break
+		else
+			user << "<span class='notice'>\The [empty_into] is full.</span>"
+			return
+
 	if(empty_into)
 		if(paperamount)
 			user << "<span class='notice'>You fill \the [empty_into] with as much shredded paper as it will carry.</span>"

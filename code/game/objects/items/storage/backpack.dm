@@ -12,8 +12,10 @@
 	slot_flags = SLOT_BACK
 
 /obj/item/storage/backpack/New()
+	..()
+	storage.max_slots = 28 // Up to four rows of space.
 	storage.max_size = 3.0
-	storage.max_volume = 80
+	storage.max_volume = 80 // Will probably be filled up quite quickly. It can store like, three tank transver valve bombs and a box of internals.
 
 /obj/item/storage/backpack/attackby(obj/item/W as obj, mob/user as mob)
 	if (storage.use_sound)
@@ -32,13 +34,15 @@
 /obj/item/storage/backpack/holding
 	name = "bag of holding"
 	desc = "A backpack that opens into a localized pocket of Blue Space."
-	w_class = 5.0
+	w_class = 4.0
 	origin_tech = "bluespace=4"
 	icon_state = "holdingpack"
 
 /obj/item/storage/backpack/holding/New()
-	storage.max_size = 5.0
-	storage.max_volume = 242
+	..()
+	storage.max_slots = 49 // Blindingly massive square block of space.
+	storage.max_size = 4.0 // Can store backpacks within itself.
+	storage.max_volume = 242 // A fuckton of space.
 
 /obj/item/storage/backpack/holding/attackby(obj/item/W as obj, mob/user as mob)
 	if(crit_fail)
@@ -69,9 +73,12 @@
 	desc = "Space Santa uses this to deliver toys to all the nice children in space in Christmas! Wow, it's pretty big!"
 	icon_state = "giftbag0"
 	item_state = "giftbag"
-	w_class = 5.0
+	w_class = 5.0 // Will not fit in the bag of holding, sadly.
 	New()
-		storage.max_size = 3.0
+		..()
+		storage.min_slots = 7
+		storage.max_slots = 35
+		storage.max_size = 3.0 // Can't hold backpacks inside of the bag.
 		storage.max_volume = 242
 
 /obj/item/storage/backpack/cultpack

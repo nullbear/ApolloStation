@@ -436,13 +436,13 @@
 
 /obj/item/storage/box/disks/New()
 	..()
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
+	new /obj/item/weapon/disk/data(storage)
+	new /obj/item/weapon/disk/data(storage)
+	new /obj/item/weapon/disk/data(storage)
+	new /obj/item/weapon/disk/data(storage)
+	new /obj/item/weapon/disk/data(storage)
+	new /obj/item/weapon/disk/data(storage)
+	new /obj/item/weapon/disk/data(storage)
 
 /*
  *	Manual -- A big ol' manual.

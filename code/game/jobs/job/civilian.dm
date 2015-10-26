@@ -69,7 +69,7 @@
 			if(H.backbag == 1)
 				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 			else
-				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			return 1
 		else
 			H.equip_to_slot_or_qdel(new /obj/item/device/radio/headset/headset_service(H), slot_l_ear)
@@ -84,7 +84,7 @@
 				if(2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/hydroponics(H), slot_back)
 				if(3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_hyd(H), slot_back)
 				if(4) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel(H), slot_back)
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			return 1
 
 /*
@@ -147,7 +147,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		return 1
 
 
@@ -175,7 +175,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		return 1
 
 
@@ -209,7 +209,7 @@
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/crowbar(H), slot_l_hand)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/bag/ore(H), slot_l_store)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/engineer(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/weapon/crowbar(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/bag/ore(H), slot_in_backpack)
 		return 1
@@ -307,7 +307,7 @@
 		if(H.job == "Jester")
 			if(H.backbag == 2) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack(H), slot_back)
 			if(H.backbag == 3) H.equip_to_slot_or_qdel(new /obj/item/storage/backpack/satchel_norm(H), slot_back)
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/under/jester(H), slot_w_uniform)
 			H.equip_to_slot_or_qdel(new /obj/item/clothing/shoes/jester(H), slot_shoes)
 			H.equip_to_slot_or_qdel(new /obj/item/device/pda/clown(H), slot_belt)
@@ -317,7 +317,7 @@
 			if(H.backbag == 1)
 				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 			else
-				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			H.mutations.Add(CLUMSY)
 			return 1
 		else if(H.job == "Mime")
@@ -335,7 +335,7 @@
 				H.equip_to_slot_or_qdel(new /obj/item/toy/crayon/mime(H), slot_l_store)
 				H.equip_to_slot_or_qdel(new /obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing(H), slot_l_hand)
 			else
-				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 				H.equip_to_slot_or_qdel(new /obj/item/toy/crayon/mime(H), slot_in_backpack)
 				H.equip_to_slot_or_qdel(new /obj/item/weapon/reagent_containers/food/drinks/bottle/bottleofnothing(H), slot_in_backpack)
 			H.verbs += /client/proc/mimespeak
@@ -354,7 +354,7 @@
 			if(H.backbag == 1)
 				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 			else
-				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+				H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 			return 1
 
 
@@ -380,7 +380,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		return 1
 
 
@@ -409,7 +409,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 		return 1
 
 
@@ -444,7 +444,7 @@
 		if(H.backbag == 1)
 			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 		else
-			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+			H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 
 		H.implant_loyalty(H)
 

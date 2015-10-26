@@ -28,6 +28,7 @@
 	//foldable = /obj/item/stack/sheet/cardboard
 
 /obj/item/storage/box/New()
+	storage.max_slots = 14
 	storage.max_size = 2.0
 	storage.max_volume = 26
 
@@ -49,16 +50,16 @@
 	New()
 		..()
 		sleep(1)
-		new /obj/item/clothing/mask/breath(src)
-		new /obj/item/weapon/tank/emergency_oxygen(src)
+		new /obj/item/clothing/mask/breath(storage)
+		new /obj/item/weapon/tank/emergency_oxygen(storage)
 		return
 
 /obj/item/storage/box/engineer/
 	New()
 		..()
 		sleep(1)
-		new /obj/item/clothing/mask/breath(src)
-		new /obj/item/weapon/tank/emergency_oxygen/engi(src)
+		new /obj/item/clothing/mask/breath(storage)
+		new /obj/item/weapon/tank/emergency_oxygen/engi(storage)
 		return
 
 /obj/item/storage/box/gloves
@@ -70,13 +71,13 @@
 	New()
 		..()
 		sleep(1)
-		new /obj/item/clothing/gloves/latex(src)
-		new /obj/item/clothing/gloves/latex(src)
-		new /obj/item/clothing/gloves/latex(src)
-		new /obj/item/clothing/gloves/latex(src)
-		new /obj/item/clothing/gloves/latex(src)
-		new /obj/item/clothing/gloves/latex(src)
-		new /obj/item/clothing/gloves/latex(src)
+		new /obj/item/clothing/gloves/latex(storage)
+		new /obj/item/clothing/gloves/latex(storage)
+		new /obj/item/clothing/gloves/latex(storage)
+		new /obj/item/clothing/gloves/latex(storage)
+		new /obj/item/clothing/gloves/latex(storage)
+		new /obj/item/clothing/gloves/latex(storage)
+		new /obj/item/clothing/gloves/latex(storage)
 		return
 
 
@@ -88,13 +89,13 @@
 	New()
 		..()
 		sleep(1)
-		new /obj/item/clothing/mask/surgical(src)
-		new /obj/item/clothing/mask/surgical(src)
-		new /obj/item/clothing/mask/surgical(src)
-		new /obj/item/clothing/mask/surgical(src)
-		new /obj/item/clothing/mask/surgical(src)
-		new /obj/item/clothing/mask/surgical(src)
-		new /obj/item/clothing/mask/surgical(src)
+		new /obj/item/clothing/mask/surgical(storage)
+		new /obj/item/clothing/mask/surgical(storage)
+		new /obj/item/clothing/mask/surgical(storage)
+		new /obj/item/clothing/mask/surgical(storage)
+		new /obj/item/clothing/mask/surgical(storage)
+		new /obj/item/clothing/mask/surgical(storage)
+		new /obj/item/clothing/mask/surgical(storage)
 		return
 
 
@@ -107,13 +108,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/reagent_containers/syringe(src)
-		new /obj/item/weapon/reagent_containers/syringe(src)
-		new /obj/item/weapon/reagent_containers/syringe(src)
-		new /obj/item/weapon/reagent_containers/syringe(src)
-		new /obj/item/weapon/reagent_containers/syringe(src)
-		new /obj/item/weapon/reagent_containers/syringe(src)
-		new /obj/item/weapon/reagent_containers/syringe(src)
+		new /obj/item/weapon/reagent_containers/syringe(storage)
+		new /obj/item/weapon/reagent_containers/syringe(storage)
+		new /obj/item/weapon/reagent_containers/syringe(storage)
+		new /obj/item/weapon/reagent_containers/syringe(storage)
+		new /obj/item/weapon/reagent_containers/syringe(storage)
 		return
 
 /obj/item/storage/box/beakers
@@ -122,10 +121,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/reagent_containers/glass/beaker(src)
-		new /obj/item/weapon/reagent_containers/glass/beaker(src)
-		new /obj/item/weapon/reagent_containers/glass/beaker(src)
-		new /obj/item/weapon/reagent_containers/glass/beaker(src)
+		new /obj/item/weapon/reagent_containers/glass/beaker(storage)
+		new /obj/item/weapon/reagent_containers/glass/beaker(storage)
+		new /obj/item/weapon/reagent_containers/glass/beaker(storage)
+		new /obj/item/weapon/reagent_containers/glass/beaker(storage)
+		new /obj/item/weapon/reagent_containers/glass/beaker(storage)
 		return
 
 /obj/item/storage/box/injectors
@@ -134,13 +134,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/dnainjector/h2m(src)
-		new /obj/item/weapon/dnainjector/h2m(src)
-		new /obj/item/weapon/dnainjector/h2m(src)
-		new /obj/item/weapon/dnainjector/h2m(src)
-		new /obj/item/weapon/dnainjector/h2m(src)
-		new /obj/item/weapon/dnainjector/h2m(src)
-		new /obj/item/weapon/dnainjector/h2m(src)
+		new /obj/item/weapon/dnainjector/h2m(storage)
+		new /obj/item/weapon/dnainjector/h2m(storage)
+		new /obj/item/weapon/dnainjector/h2m(storage)
+		new /obj/item/weapon/dnainjector/h2m(storage)
+		new /obj/item/weapon/dnainjector/h2m(storage)
 
 
 /obj/item/storage/box/blanks
@@ -149,20 +147,18 @@
 
 	New()
 		..()
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
-		new /obj/item/ammo_casing/shotgun/blank(src)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
+		new /obj/item/ammo_casing/shotgun/blank(storage)
 		return
 
 /obj/item/storage/box/beanbags
@@ -171,20 +167,18 @@
 
 	New()
 		..()
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
-		new /obj/item/ammo_casing/shotgun/beanbag(src)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
+		new /obj/item/ammo_casing/shotgun/beanbag(storage)
 		return
 
 /obj/item/storage/box/shotgunammo
@@ -193,20 +187,18 @@
 
 	New()
 		..()
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
-		new /obj/item/ammo_casing/shotgun(src)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
+		new /obj/item/ammo_casing/shotgun(storage)
 		return
 
 /obj/item/storage/box/flashbangs
@@ -216,10 +208,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/grenade/flashbang(src)
-		new /obj/item/weapon/grenade/flashbang(src)
-		new /obj/item/weapon/grenade/flashbang(src)
-		new /obj/item/weapon/grenade/flashbang(src)
+		new /obj/item/weapon/grenade/flashbang(storage)
+		new /obj/item/weapon/grenade/flashbang(storage)
+		new /obj/item/weapon/grenade/flashbang(storage)
+		new /obj/item/weapon/grenade/flashbang(storage)
+		new /obj/item/weapon/grenade/flashbang(storage)
 		return
 
 /obj/item/storage/box/emps
@@ -229,10 +222,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/grenade/empgrenade(src)
-		new /obj/item/weapon/grenade/empgrenade(src)
-		new /obj/item/weapon/grenade/empgrenade(src)
-		new /obj/item/weapon/grenade/empgrenade(src)
+		new /obj/item/weapon/grenade/empgrenade(storage)
+		new /obj/item/weapon/grenade/empgrenade(storage)
+		new /obj/item/weapon/grenade/empgrenade(storage)
+		new /obj/item/weapon/grenade/empgrenade(storage)
+		new /obj/item/weapon/grenade/empgrenade(storage)
 		return
 
 /obj/item/storage/box/trackimp
@@ -242,13 +236,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/implanter(src)
-		new /obj/item/weapon/locator(src)
-		new /obj/item/weapon/implantpad(src)
-		new /obj/item/weapon/implantcase/tracking(src)
-		new /obj/item/weapon/implantcase/tracking(src)
-		new /obj/item/weapon/implantcase/tracking(src)
-		new /obj/item/weapon/implantcase/tracking(src)
+		new /obj/item/weapon/implanter(storage)
+		new /obj/item/weapon/locator(storage)
+		new /obj/item/weapon/implantpad(storage)
+		new /obj/item/weapon/implantcase/tracking(storage)
+		new /obj/item/weapon/implantcase/tracking(storage)
 		return
 
 /obj/item/storage/box/chemimp
@@ -258,13 +250,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/implanter(src)
-		new /obj/item/weapon/implantpad(src)
-		new /obj/item/weapon/implantcase/chem(src)
-		new /obj/item/weapon/implantcase/chem(src)
-		new /obj/item/weapon/implantcase/chem(src)
-		new /obj/item/weapon/implantcase/chem(src)
-		new /obj/item/weapon/implantcase/chem(src)
+		new /obj/item/weapon/implanter(storage)
+		new /obj/item/weapon/implantpad(storage)
+		new /obj/item/weapon/implantcase/chem(storage)
+		new /obj/item/weapon/implantcase/chem(storage)
+		new /obj/item/weapon/implantcase/chem(storage)
 		return
 
 
@@ -276,13 +266,13 @@
 
 	New()
 		..()
-		new /obj/item/clothing/glasses/regular(src)
-		new /obj/item/clothing/glasses/regular(src)
-		new /obj/item/clothing/glasses/regular(src)
-		new /obj/item/clothing/glasses/regular(src)
-		new /obj/item/clothing/glasses/regular(src)
-		new /obj/item/clothing/glasses/regular(src)
-		new /obj/item/clothing/glasses/regular(src)
+		new /obj/item/clothing/glasses/regular(storage)
+		new /obj/item/clothing/glasses/regular(storage)
+		new /obj/item/clothing/glasses/regular(storage)
+		new /obj/item/clothing/glasses/regular(storage)
+		new /obj/item/clothing/glasses/regular(storage)
+		new /obj/item/clothing/glasses/regular(storage)
+		new /obj/item/clothing/glasses/regular(storage)
 		return
 
 /obj/item/storage/box/drinkingglasses
@@ -291,10 +281,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(src)
+		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/drinkingglass(storage)
 		return
 
 /obj/item/storage/box/cdeathalarm_kit
@@ -305,13 +296,13 @@
 
 	New()
 		..()
-		new /obj/item/weapon/implanter(src)
-		new /obj/item/weapon/implantcase/death_alarm(src)
-		new /obj/item/weapon/implantcase/death_alarm(src)
-		new /obj/item/weapon/implantcase/death_alarm(src)
-		new /obj/item/weapon/implantcase/death_alarm(src)
-		new /obj/item/weapon/implantcase/death_alarm(src)
-		new /obj/item/weapon/implantcase/death_alarm(src)
+		new /obj/item/weapon/implanter(storage)
+		new /obj/item/weapon/implantcase/death_alarm(storage)
+		new /obj/item/weapon/implantcase/death_alarm(storage)
+		new /obj/item/weapon/implantcase/death_alarm(storage)
+		new /obj/item/weapon/implantcase/death_alarm(storage)
+		new /obj/item/weapon/implantcase/death_alarm(storage)
+		new /obj/item/weapon/implantcase/death_alarm(storage)
 		return
 
 /obj/item/storage/box/condimentbottles
@@ -320,10 +311,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/reagent_containers/food/condiment(src)
-		new /obj/item/weapon/reagent_containers/food/condiment(src)
-		new /obj/item/weapon/reagent_containers/food/condiment(src)
-		new /obj/item/weapon/reagent_containers/food/condiment(src)
+		new /obj/item/weapon/reagent_containers/food/condiment(storage)
+		new /obj/item/weapon/reagent_containers/food/condiment(storage)
+		new /obj/item/weapon/reagent_containers/food/condiment(storage)
+		new /obj/item/weapon/reagent_containers/food/condiment(storage)
+		new /obj/item/weapon/reagent_containers/food/condiment(storage)
 		return
 
 /obj/item/storage/box/cups
@@ -331,20 +323,18 @@
 	desc = "It has pictures of paper cups on the front."
 	New()
 		..()
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
-		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(src)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
+		new /obj/item/weapon/reagent_containers/food/drinks/sillycup(storage)
 		return
 
 /obj/item/storage/box/donkpockets
@@ -354,10 +344,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(src)
+		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/donkpocket(storage)
 		return
 
 /obj/item/storage/box/monkeycubes
@@ -368,17 +359,16 @@
 	New()
 		..()
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/food/snacks/monkeycube")
-		storage.whitelist = 1
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(src)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped(storage)
 		return
 
 /obj/item/storage/box/farwacubes
@@ -389,17 +379,16 @@
 	New()
 		..()
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/food/snacks/monkeycube")
-		storage.whitelist = 1
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(src)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube(storage)
 		return
 
 
@@ -411,17 +400,16 @@
 	New()
 		..()
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/food/snacks/monkeycube")
-		storage.whitelist = 1
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(src)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube(storage)
 		return
 
 
@@ -433,17 +421,16 @@
 	New()
 		..()
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/food/snacks/monkeycube")
-		storage.whitelist = 1
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(src)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
+		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube(storage)
 		return
 
 
@@ -454,13 +441,13 @@
 
 	New()
 		..()
-		new /obj/item/weapon/card/id(src)
-		new /obj/item/weapon/card/id(src)
-		new /obj/item/weapon/card/id(src)
-		new /obj/item/weapon/card/id(src)
-		new /obj/item/weapon/card/id(src)
-		new /obj/item/weapon/card/id(src)
-		new /obj/item/weapon/card/id(src)
+		new /obj/item/weapon/card/id(storage)
+		new /obj/item/weapon/card/id(storage)
+		new /obj/item/weapon/card/id(storage)
+		new /obj/item/weapon/card/id(storage)
+		new /obj/item/weapon/card/id(storage)
+		new /obj/item/weapon/card/id(storage)
+		new /obj/item/weapon/card/id(storage)
 		return
 
 
@@ -472,10 +459,13 @@
 
 	New()
 		..()
-		new /obj/item/weapon/cartridge/security(src)
-		new /obj/item/weapon/cartridge/security(src)
-		new /obj/item/weapon/cartridge/security(src)
-		new /obj/item/weapon/cartridge/security(src)
+		new /obj/item/weapon/cartridge/security(storage)
+		new /obj/item/weapon/cartridge/security(storage)
+		new /obj/item/weapon/cartridge/security(storage)
+		new /obj/item/weapon/cartridge/security(storage)
+		new /obj/item/weapon/cartridge/security(storage)
+		new /obj/item/weapon/cartridge/security(storage)
+		new /obj/item/weapon/cartridge/security(storage)
 		return
 
 /obj/item/storage/box/handcuffs
@@ -485,10 +475,11 @@
 
 	New()
 		..()
-		new /obj/item/weapon/handcuffs(src)
-		new /obj/item/weapon/handcuffs(src)
-		new /obj/item/weapon/handcuffs(src)
-		new /obj/item/weapon/handcuffs(src)
+		new /obj/item/weapon/handcuffs(storage)
+		new /obj/item/weapon/handcuffs(storage)
+		new /obj/item/weapon/handcuffs(storage)
+		new /obj/item/weapon/handcuffs(storage)
+		new /obj/item/weapon/handcuffs(storage)
 		return
 
 /obj/item/storage/box/mousetraps
@@ -498,13 +489,11 @@
 
 	New()
 		..()
-		new /obj/item/device/assembly/mousetrap(src)
-		new /obj/item/device/assembly/mousetrap(src)
-		new /obj/item/device/assembly/mousetrap(src)
-		new /obj/item/device/assembly/mousetrap(src)
-		new /obj/item/device/assembly/mousetrap(src)
-		new /obj/item/device/assembly/mousetrap(src)
-		new /obj/item/device/assembly/mousetrap(src)
+		new /obj/item/device/assembly/mousetrap(storage)
+		new /obj/item/device/assembly/mousetrap(storage)
+		new /obj/item/device/assembly/mousetrap(storage)
+		new /obj/item/device/assembly/mousetrap(storage)
+		new /obj/item/device/assembly/mousetrap(storage)
 		return
 
 /obj/item/storage/box/pillbottles
@@ -513,34 +502,31 @@
 
 	New()
 		..()
-		new /obj/item/weapon/storage/pill_bottle(src)
-		new /obj/item/weapon/storage/pill_bottle(src)
-		new /obj/item/weapon/storage/pill_bottle(src)
-		new /obj/item/weapon/storage/pill_bottle(src)
-		new /obj/item/weapon/storage/pill_bottle(src)
-		new /obj/item/weapon/storage/pill_bottle(src)
-		new /obj/item/weapon/storage/pill_bottle(src)
+		new /obj/item/storage/pill_bottle(storage)
+		new /obj/item/storage/pill_bottle(storage)
+		new /obj/item/storage/pill_bottle(storage)
+		new /obj/item/storage/pill_bottle(storage)
+		new /obj/item/storage/pill_bottle(storage)
 		return
 
 /obj/item/storage/box/snappops
 	name = "snap pop box"
-	desc = "Ten wrappers of fun! Ages 10 and up. Not suitable for children."
+	desc = "Ten wrappers of fun for all ages! Ages 10 and up. Not suitable for children."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "spbox"
 	New()
 		..()
 		storage.hold_list = list("/obj/item/toy/snappop")
-		storage.whitelist = 1
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
-		new /obj/item/toy/snappop(src)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
+		new /obj/item/toy/snappop(storage)
 		return
 
 
@@ -555,21 +541,18 @@
 	New()
 		..()
 		storage.hold_list = list("/obj/item/weapon/flame/match")
-		storage.whitelist = 1
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
-		new /obj/item/weapon/flame/match(src)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
+		new /obj/item/weapon/flame/match(storage)
 		return
 
 	attackby(obj/item/weapon/flame/match/W as obj, mob/user as mob)
@@ -590,13 +573,11 @@
 	icon_state = "syringe"
 	New()
 		..()
-		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(src)
-		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(src)
-		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(src)
-		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(src)
-		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(src)
-		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(src)
-		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(src)
+		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(storage)
+		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(storage)
+		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(storage)
+		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(storage)
+		new /obj/item/weapon/reagent_containers/hypospray/autoinjector(storage)
 		return
 
 /obj/item/storage/box/lights
@@ -605,29 +586,30 @@
 	icon_state = "light"
 	desc = "This box is shaped on the inside so that only light tubes and bulbs fit."
 	item_state = "syringe_kit"
+	w_class = 3.0
 	New()
 		storage.max_size = 2.0
-		storage.max_volume = 52
+		storage.max_slots = 28
+		storage.max_volume = 80
 		storage.hold_list = list("/obj/item/weapon/light/tube", "/obj/item/weapon/light/bulb")
-		storage.whitelist = 1
 
 /obj/item/storage/box/lights/bulbs/New()
 	..()
 	storage.max_volume = 26
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
 	return
 
 /obj/item/storage/box/lights/tubes
@@ -636,20 +618,20 @@
 
 /obj/item/storage/box/lights/tubes/New()
 	..()
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
 	return
 
 /obj/item/storage/box/lights/mixed
@@ -658,24 +640,24 @@
 
 /obj/item/storage/box/lights/mixed/New()
 	..()
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/tube(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
-	new /obj/item/weapon/light/bulb(src)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/tube(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
+	new /obj/item/weapon/light/bulb(storage)
 	return
 
 /obj/item/storage/box/bodybags
@@ -684,8 +666,6 @@
 	icon_state = "bodybags"
 	New()
 		..()
-		new /obj/item/bodybag(storage)
-		new /obj/item/bodybag(storage)
 		new /obj/item/bodybag(storage)
 		new /obj/item/bodybag(storage)
 		new /obj/item/bodybag(storage)

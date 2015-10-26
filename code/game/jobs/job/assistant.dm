@@ -18,7 +18,7 @@
 	if(H.backbag == 1)
 		H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 	else
-		H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H.back), slot_in_backpack)
+		H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_in_backpack)
 	return 1
 
 /datum/job/assistant/get_access()

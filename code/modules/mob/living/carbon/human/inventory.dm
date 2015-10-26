@@ -305,7 +305,10 @@
 		if(slot_in_backpack)
 			if(src.get_active_hand() == W)
 				src.u_equip(W)
-			W.loc = src.back
+			if(src.back && istype(src.back, /obj/item/storage))
+				var/obj/item/storage/B = src.back
+				if(B.storage.can_be_inserted(W))
+					W.loc = B.storage
 		if(slot_tie)
 			var/obj/item/clothing/under/uniform = src.w_uniform
 			uniform.attackby(W,src)

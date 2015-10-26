@@ -189,7 +189,7 @@
 					user << "<span class='notice'>\The [src] is full.</span>"
 					return 1
 				else
-					P.storage.remove_from_storage(G,src)
+					P.storage.remove(G,src)
 					if(item_quants[G.name])
 						item_quants[G.name]++
 					else

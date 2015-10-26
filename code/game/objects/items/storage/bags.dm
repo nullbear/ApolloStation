@@ -18,7 +18,10 @@
 /obj/item/storage/bag
 	slot_flags = SLOT_BELT
 
-/obj/item/storage/bag/
+/obj/item/storage/bag/New()
+	..()
+	storage.hold_list = list("/obj/item/weapon/disk/nuclear")
+	storage.whitelist = 0 // Blacklists the nuclear disc. I don't know why.
 // -----------------------------
 //          Trash bag
 // -----------------------------
@@ -28,23 +31,20 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "trashbag0"
 	item_state = "trashbag"
-
 	w_class = 4
 	New()
 		..()
 		storage.updates_icon = 1
-		storage.max_size = 2
-		storage.max_volume = 80
-		storage.hold_list = list("/obj/item/weapon/disk/nuclear")
-		storage.whitelist = 0
+		storage.max_slots = 35 // As many as 5 whole rows of trash.
+		storage.max_size = 2 // Small items only. Can't be used to store bombs.
+		storage.max_volume = 80 // Can store like, 35 pieces of trash.
 
-
-/obj/item/storage/bag/trash/update_icon()
-	if(storage.contents.len == 0)
+/obj/item/storage/bag/trash/update_icon() // Changes the sprite of the bag depending on how full it is, based on volume.
+	if(storage.total_volume() == 0)
 		icon_state = "trashbag0"
-	else if(storage.contents.len < 12)
+	else if(storage.total_volume() < 40)
 		icon_state = "trashbag1"
-	else if(storage.contents.len < 21)
+	else if(storage.total_volume() < 80)
 		icon_state = "trashbag2"
 	else icon_state = "trashbag3"
 
@@ -63,10 +63,9 @@
 	w_class = 4
 	New()
 		..()
-		storage.max_size = 2
+		storage.max_slots = 21 // Three rows of junk. Even worse than a backpack.
+		storage.max_size = 2 // Small items only. Pretty pathetic.
 		storage.max_volume = 80
-		storage.hold_list = list("/obj/item/weapon/disk/nuclear")
-		storage.whitelist = 0
 
 // -----------------------------
 //        Mining Satchel
@@ -81,9 +80,11 @@
 	w_class = 3
 	New()
 		..()
-		storage.max_size = 3
-		storage.max_volume = 80
+		storage.max_size = 2
+		storage.max_slots = 35 // Maximum of 5 rows, allowing for a potential of 35 ore.
+		storage.max_volume = 80 // Can store like, 16 pieces of ore. It's intended primarily for picking ore up, not hauling it.
 		storage.hold_list = list("/obj/item/weapon/ore")
+		storage.whitelist = 1
 
 
 // -----------------------------
@@ -94,19 +95,19 @@
 	name = "plant bag"
 	icon = 'icons/obj/hydroponics.dmi'
 	icon_state = "plantbag"
-	w_class = 2
+	w_class = 3
 	New()
 		..()
 		storage.max_size = 2
-		storage.max_volume = 26
+		storage.max_slots = 35
+		storage.max_volume = 80
 		storage.hold_list = list("/obj/item/weapon/reagent_containers/food/snacks/grown","/obj/item/seeds","/obj/item/weapon/grown")
+		storage.whitelist = 1
 
 
 // -----------------------------
 //        Sheet Snatcher
 // -----------------------------
-// Because it stacks stacks, this doesn't operate normally.
-// However, making it a storage/bag allows us to reuse existing code in some places. -Sayu
 
 /obj/item/storage/bag/sheetsnatcher
 	name = "sheet snatcher"
@@ -119,6 +120,11 @@
 
 	New()
 		..()
+		storage.max_size = 2
+		storage.max_slots = 14
+		storage.max_volume = 80
+		storage.hold_list = list("/obj/item/stack/sheet")
+		storage.whitelist = 1
 
 
 /obj/item/storage/bag/sheetsnatcher/borg
@@ -135,10 +141,12 @@
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "cashbag"
 	desc = "A bag for carrying lots of cash. It's got a big dollar sign printed on the front."
-	w_class = 2
+	w_class = 3
 	New()
 		..()
 		storage.max_size = 2
-		storage.max_volume = 26
+		storage.max_slots = 21
+		storage.whitelist = 1
+		storage.max_volume = 80
 		storage.hold_list = list("/obj/item/weapon/coin","/obj/item/weapon/spacecash")
 

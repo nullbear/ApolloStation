@@ -97,11 +97,12 @@
 			return
 
 	if(istype(W, /obj/item/storage/box))
+		var/obj/item/storage/box/WW = W
 		if (uses >= max_uses)
 			user << "<span class='warning'>[src.name] is full."
 			return
 		var/total_added = 0
-		for (var/obj/item/weapon/light/L in W)
+		for (var/obj/item/weapon/light/L in WW.storage)
 			if(L.status == 0 && uses < max_uses)
 				AddUses(1)
 				total_added += 1

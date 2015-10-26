@@ -13,10 +13,13 @@
 	icon_state = "firstaid"
 	throw_speed = 2
 	throw_range = 8
+	w_class = 3.0
 	var/empty = 0
 
 /obj/item/storage/firstaid/New()
 	..()
+	storage.min_slots = 7
+	storage.max_slots = 14 // First aid kits are bigger now! :D
 	storage.max_size = 2.0
 	storage.max_volume = 26
 
@@ -76,7 +79,7 @@
 		new /obj/item/weapon/reagent_containers/pill/antitox(storage)
 		new /obj/item/weapon/reagent_containers/pill/antitox(storage)
 		new /obj/item/weapon/reagent_containers/pill/antitox(storage)
-		new /obj/item/device/healthanalyzer( src )
+		new /obj/item/device/healthanalyzer(storage)
 		return
 
 /obj/item/storage/firstaid/o2
@@ -129,8 +132,10 @@
 	..()
 	storage.hold_list = list("/obj/item/weapon/reagent_containers/pill","/obj/item/weapon/dice","/obj/item/weapon/paper")
 	storage.use_sound = null
+	storage.min_slots = 7
+	storage.max_slots = 14
 	storage.max_size = 1.0
-	storage.max_volume = 14
+	storage.max_volume = 28
 
 /obj/item/storage/pill_bottle/kelotane
 	name = "bottle of kelotane pills"

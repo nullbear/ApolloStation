@@ -472,15 +472,15 @@ var/global/datum/controller/occupations/job_master
 							H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 						if(2)
 							var/obj/item/storage/backpack/BPK = new/obj/item/storage/backpack(H)
-							new /obj/item/storage/box/survival(BPK)
+							new /obj/item/storage/box/survival(BPK.storage)
 							H.equip_to_slot_or_qdel(BPK, slot_back,1)
 						if(3)
 							var/obj/item/storage/backpack/BPK = new/obj/item/storage/backpack/satchel_norm(H)
-							new /obj/item/storage/box/survival(BPK)
+							new /obj/item/storage/box/survival(BPK.storage)
 							H.equip_to_slot_or_qdel(BPK, slot_back,1)
 						if(4)
 							var/obj/item/storage/backpack/BPK = new/obj/item/storage/backpack/satchel(H)
-							new /obj/item/storage/box/survival(BPK)
+							new /obj/item/storage/box/survival(BPK.storage)
 							H.equip_to_slot_or_qdel(BPK, slot_back,1)
 
 					//Deferred item spawning.
@@ -494,7 +494,7 @@ var/global/datum/controller/occupations/job_master
 							for(var/thing in spawn_in_storage)
 								H << "\blue Placing [thing] in your [B]!"
 								var/datum/gear/G = gear_datums[thing]
-								new G.path(B)
+								new G.path(B.storage)
 						else
 							H << "\red Failed to locate a storage object on your mob, either you spawned with no arms and no backpack or this is a bug."
 
