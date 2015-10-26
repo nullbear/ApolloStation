@@ -96,7 +96,7 @@
 			user << "You need a working light."
 			return
 
-	if(istype(W, /obj/item/weapon/storage/box))
+	if(istype(W, /obj/item/storage/box))
 		if (uses >= max_uses)
 			user << "<span class='warning'>[src.name] is full."
 			return

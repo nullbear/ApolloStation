@@ -1,4 +1,4 @@
-/obj/item/weapon/storage/box/bloodpacks
+/obj/item/storage/box/bloodpacks
 	name = "blood packs bags"
 	desc = "This box contains blood packs."
 	icon_state = "sterile"

@@ -471,7 +471,7 @@ var/global/datum/controller/occupations/job_master
 						if(1)
 							H.equip_to_slot_or_qdel(new /obj/item/storage/box/survival(H), slot_r_hand)
 						if(2)
-							var/obj/item/weapon/storage/backpack/BPK = new/obj/item/weapon/storage/backpack(H)
+							var/obj/item/storage/backpack/BPK = new/obj/item/storage/backpack(H)
 							new /obj/item/storage/box/survival(BPK)
 							H.equip_to_slot_or_qdel(BPK, slot_back,1)
 						if(3)
@@ -485,8 +485,8 @@ var/global/datum/controller/occupations/job_master
 
 					//Deferred item spawning.
 					if(spawn_in_storage && spawn_in_storage.len)
-						var/obj/item/weapon/storage/B
-						for(var/obj/item/weapon/storage/S in H.contents)
+						var/obj/item/storage/B
+						for(var/obj/item/storage/S in H.contents)
 							B = S
 							break
 

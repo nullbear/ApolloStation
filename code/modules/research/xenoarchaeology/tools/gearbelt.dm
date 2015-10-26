@@ -1,10 +1,10 @@
 
-/obj/item/weapon/storage/belt/archaeology
+/obj/item/storage/belt/archaeology
 	name = "excavation gear-belt"
 	desc = "Can hold various excavation gear."
 	icon_state = "gearbelt"
 	item_state = "utility"
-	can_hold = list(
+	/*can_hold = list(
 		"/obj/item/weapon/storage/box/samplebags",
 		"/obj/item/device/core_sampler",
 		"/obj/item/device/beacon_locator",
@@ -25,4 +25,4 @@
 		"/obj/item/clothing/glasses",
 		"/obj/item/weapon/wrench",
 		"/obj/item/weapon/storage/box/excavation",
-		"/obj/item/weapon/anobattery")
+		"/obj/item/weapon/anobattery")*/

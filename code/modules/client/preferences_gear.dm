@@ -713,7 +713,7 @@ var/global/list/gear_datums = list()
 
 /datum/gear/briefcase
 	display_name = "briefcase"
-	path = /obj/item/weapon/storage/briefcase
+	path = /obj/item/storage/briefcase
 	sort_category = "utility"
 	cost = 2
 

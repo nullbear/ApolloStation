@@ -371,7 +371,7 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 
 						if(being_built.build_path)
 							var/obj/new_item = new being_built.build_path(src)
-							if( new_item.type == /obj/item/weapon/storage/backpack/holding )
+							if( new_item.type == /obj/item/storage/backpack/holding )
 								new_item.investigate_log("built by [key]","singulo")
 							new_item.reliability = being_built.reliability
 							if(linked_lathe.hacked) being_built.reliability = max((reliability / 2), 0)

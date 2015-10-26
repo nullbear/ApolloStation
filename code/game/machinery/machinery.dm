@@ -391,7 +391,7 @@ Class Procs:
 	qdel(src)
 	return 1
 
-/obj/machinery/proc/exchange_parts(mob/user, obj/item/weapon/storage/part_replacer/W)
+/obj/machinery/proc/exchange_parts(mob/user, obj/item/storage/part_replacer/W)
 	var/shouldplaysound = 0
 	if(istype(W) && component_parts)
 		if(panel_open)
@@ -405,8 +405,8 @@ Class Procs:
 				for(var/obj/item/weapon/stock_parts/B in W.contents)
 					if(istype(B, P) && istype(A, P))
 						if(B.rating > A.rating)
-							W.remove_from_storage(B, src)
-							W.handle_item_insertion(A, 1)
+							W.storage.remove(B, src)
+							W.storage.insert(A, 1)
 							component_parts -= A
 							component_parts += B
 							B.loc = null
@@ -422,4 +422,4 @@ Class Procs:
 			W.play_rped_sound()
 		return 1
 	else
-		return 0
+		return 0 */

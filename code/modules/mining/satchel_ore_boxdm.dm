@@ -10,15 +10,15 @@
 	var/last_update = 0
 	var/list/stored_ore = list()
 
-/obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/ore_box/attackby(obj/item/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/ore))
 		user.u_equip(W)
 		src.contents += W
-	if (istype(W, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = W
-		S.hide_from(usr)
-		for(var/obj/item/weapon/ore/O in S.contents)
-			S.remove_from_storage(O, src) //This will move the item to this item's contents
+	if (istype(W, /obj/item/storage))
+		var/obj/item/storage/S = W
+		//S.hide_from(usr)
+		//for(var/obj/item/weapon/ore/O in S.contents)
+			//S.remove_from_storage(O, src) //This will move the item to this item's contents
 		user << "\blue You empty the satchel into the box."
 
 	update_ore_count()

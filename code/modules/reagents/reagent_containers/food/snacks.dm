@@ -139,7 +139,7 @@
 		if((loc == usr && usr.stat == 0))
 			name = "[n_name]"
 		return
-	if(istype(W,/obj/item/weapon/storage))
+	if(istype(W,/obj/item/storage))
 		..() // -> item/attackby()
 
 	// Eating with forks

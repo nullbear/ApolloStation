@@ -73,7 +73,7 @@
 	var/list/devices = list(
 		/obj/item/robot_parts,
 		/obj/item/storage/lockbox,
-		/obj/item/weapon/storage/secure,
+		/obj/item/storage/secure,
 		/obj/item/weapon/circuitboard,
 		/obj/item/weapon/rig,
 		/obj/item/device/eftpos,

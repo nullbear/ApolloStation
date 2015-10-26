@@ -192,7 +192,7 @@
 		if("gloves")
 			new/obj/item/clothing/gloves/botanic_leather(src.loc)
 		if("tbelt")
-			new/obj/item/weapon/storage/belt/utility(src.loc)
+			new/obj/item/storage/belt/utility(src.loc)
 		if("satchel")
 			new/obj/item/storage/backpack/satchel(src.loc)
 		if("cashbag")

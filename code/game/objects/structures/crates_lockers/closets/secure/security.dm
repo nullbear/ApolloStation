@@ -157,7 +157,7 @@
 		new /obj/item/weapon/reagent_containers/spray/pepper(src)
 		new /obj/item/weapon/melee/baton/loaded(src)
 		new /obj/item/weapon/gun/energy/taser(src)
-		new /obj/item/weapon/storage/box/holobadge(src)
+		new /obj/item/storage/box/holobadge(src)
 		new /obj/item/clothing/head/beret/sec/warden(src)
 		return
 
@@ -254,7 +254,7 @@
 		new /obj/item/clothing/head/det_hat(src)
 		new /obj/item/clothing/head/det_hat/black(src)
 		new /obj/item/clothing/shoes/brown(src)
-		new /obj/item/weapon/storage/box/evidence(src)
+		new /obj/item/storage/box/evidence(src)
 		new /obj/item/device/radio/headset/headset_sec(src)
 		new /obj/item/device/detective_scanner(src)
 		new /obj/item/clothing/suit/armor/det_suit(src)
@@ -317,7 +317,7 @@
 		new /obj/item/weapon/pen (src)
 		new /obj/item/clothing/suit/judgerobe (src)
 		new /obj/item/clothing/head/powdered_wig (src)
-		new /obj/item/weapon/storage/briefcase(src)
+		new /obj/item/storage/briefcase(src)
 		return
 
 /obj/structure/closet/secure_closet/wall

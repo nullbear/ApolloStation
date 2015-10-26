@@ -24,7 +24,7 @@
 	for(var/obj/item/weapon/circuitboard/communications/commboard in world)
 		if(commboard.z in config.admin_levels)
 			continue
-		if(istype(commboard.loc,/turf) || istype(commboard.loc,/obj/item/weapon/storage))
+		if(istype(commboard.loc,/turf) || istype(commboard.loc,/obj/item/storage))
 			break
 		callshuttle++
 

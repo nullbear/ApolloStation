@@ -220,7 +220,7 @@
 		..()
 		var/blocked = list(/obj/item/storage/backpack/chameleon, /obj/item/storage/backpack/satchel/withwallet)
 		for(var/U in typesof(/obj/item/storage/backpack)-blocked)//Prevent infinite loops and bad backpacks.
-			var/obj/item/weapon/storage/backpack/V = new U
+			var/obj/item/storage/backpack/V = new U
 			src.clothing_choices[V.name] = U
 		return
 
@@ -243,7 +243,7 @@
 		if(!picked || !clothing_choices[picked])
 			return
 		var/newtype = clothing_choices[picked]
-		var/obj/item/weapon/storage/backpack/A = new newtype
+		var/obj/item/storage/backpack/A = new newtype
 
 		desc = null
 		permeability_coefficient = 0.90

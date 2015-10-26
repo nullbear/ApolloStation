@@ -169,10 +169,10 @@
 
 
 //Recursive function to find everything a mob is holding.
-/mob/living/get_contents(var/obj/item/weapon/storage/Storage = null)
+/mob/living/get_contents(var/obj/item/storage/Storage = null)
 	var/list/L = list()
 
-	if(Storage) //If it called itself
+	/*if(Storage) //If it called itself
 		L += Storage.return_inv()
 
 		//Leave this commented out, it will cause storage items to exponentially add duplicate to the list
@@ -205,7 +205,7 @@
 			L += D.wrapped
 			if(istype(D.wrapped, /obj/item/weapon/storage)) //this should never happen
 				L += get_contents(D.wrapped)
-		return L
+		return L*/
 
 /mob/living/proc/check_contents_for(A)
 	var/list/L = src.get_contents()

@@ -62,9 +62,9 @@ datum/genesequence
 				src.visible_message("\blue \icon[src] [user] inserts [W] into [src], the fossil is consumed as [src] extracts genetic data from it.")
 				qdel(W)
 				updateDialog()
-	else if (istype(W, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = W
-		S.hide_from(usr)
+	//else if (istype(W, /obj/item/weapon/storage))
+		/*var/obj/item/weapon/storage/S = W
+		//S.hide_from(usr)
 		var/numaccepted = 0
 		var/numrejected = 0
 		var/full = 0
@@ -89,7 +89,7 @@ datum/genesequence
 			outmsg += " \red[numrejected] fossils were rejected."
 		if(full)
 			outmsg += " \red[src] can not extract any more genetic data from new fossils."
-		user << outmsg
+		user << outmsg*/
 
 	else
 		..()

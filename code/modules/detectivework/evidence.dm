@@ -23,12 +23,12 @@
 			return
 	else
 		//If it isn't on the floor. Do some checks to see if it's in our hands or a box. Otherwise give up.
-		if(istype(I.loc,/obj/item/weapon/storage))	//in a container.
+		if(istype(I.loc,/obj/item/storage))	//in a container.
 			var/sdepth = I.storage_depth(user)
 			if (sdepth == -1 || sdepth > 1)
 				return	//too deeply nested to access
 
-			var/obj/item/weapon/storage/U = I.loc
+			var/obj/item/storage/U = I.loc
 			user.client.screen -= I
 			U.contents.Remove(I)
 		else if(user.l_hand == I)					//in a hand
@@ -97,7 +97,7 @@
 	..(user)
 	if (stored_item) user.examinate(stored_item)
 
-/obj/item/weapon/storage/box/evidence
+/obj/item/storage/box/evidence
 	name = "evidence bag box"
 	desc = "A box claiming to contain evidence bags."
 	New()

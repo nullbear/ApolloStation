@@ -5,30 +5,39 @@
 	This is a container that is able to store items, allowing for more flexible useage across code.
 
 	max_size affects the maximum weight class the storage object can hold.
-	total_volume affects the total volume the storage can hold. Volume is calculated by weight class:
+	total_volume affects the total volume the storage can hold. Object Volume is calculated by weight class:
 
 	w_class 1 = 2u
-	w_class 2 = 8u
-	w_class 3 = 26u
-	w_class 4 = 80u
-	w_class 5 = 242u
-	w_class 6 = 728u
+	w_class 2 = 5u
+	w_class 3 = 18u
+	w_class 4 = 65u
+	w_class 5 = 218u
+	w_class 6 = 693u
 
-	A bag of holding, can store 81 pens, 27 pda's, 9 boxes, or 3 Backpacks.
-	A backpack, can store 27 pens, 9 pdas, or 3 boxes.
+	While Internal volume is USUALLY determined by weight class:
+
+	w_class 1 = 2u, can store ONE tiny object, but usually due to w_size limitations, will not store anything.
+	w_class 2 = 8u, can store FOUR tiny objects.
+	w_class 3 = 26u, can store THIRTEEN tiny objects or FIVE small objects.
+	w_class 4 = 80u, can store FOURTY tiny objects, SIXTEEN small or FOUR average and EIGHT tiny.
+	w_class 5 = 242u, can store FORTY-NINE tiny, FORTY EIGHT small, THIRTEEN average, or THREE large and TWENTY THREE tiny.
+	w_class 6 = 728u, can store FORTY-NINE tiny or small, FORTY average, ELEVEN large, THREE huge, or ONE gigantic and 17 tiny.
+
+	A bag of holding, can store 49 pens, 48 pda's, 13 boxes, or 3 Backpacks.
+	A backpack, can store 40 pens, 16 pdas, or 4 boxes.
 
 	When examined, a bag will calculate the amount of space remaining inside, and return a value similar to w_class in a way that is intuitive, but not too mechanical.
 
 	For example:
 
-	There is a colossal amount of space, means that there is more than 2,187 units of space remaining.
-	There is a gigantic amount of space, means that there is between 729, and 2,187 units of space remaining.
-	There is a huge amount of space, means that there is between 243, and 729 units of space remaining.
-	There is a large amount of space, means that there is between 81 and 243 units of space remaining.
-	There is a normal amount of space, means that there is between 27 and 81 units of space remaining.
-	There is a small amount of space, means that there is between 9 and 27 units of space remaining.
-	There is a tiny amount of space means that there is between 3 and 9 units of space remaining.
-	It is full, means that there is less than 3 units of space remaining.
+	There is a colossal amount of space, means that there is more than 2,138 units of space remaining, any item should fit.
+	There is a gigantic amount of space, means that there is between 693, and 2,138 units of space remaining, a gigantic item will fit.
+	There is a huge amount of space, means that there is between 218, and 693 units of space remaining, a huge item will fit.
+	There is a large amount of space, means that there is between 65 and 218 units of space remaining, a large item will fit.
+	There is a normal amount of space, means that there is between 18 and 65 units of space remaining, an average item will fit.
+	There is a small amount of space, means that there is between 5 and 18 units of space remaining, a small item will fit.
+	There is a tiny amount of space means that there is between 2 and 5 units of space remaining, a tiny item will fit.
+	It is full, means that there is less than 2 units of space remaining, and nothing will fit.
 
 
 	Flavour:
@@ -47,8 +56,6 @@
 	Destroy(drop_contents) // If drop_contents is set to 1, the object will drop the contents onto the floor, instead.
 	Return_Inv() // Will return the objects inventory as a list, including the inventory of all objects inside.
 
-
-
 */
 
 
@@ -57,6 +64,8 @@
 	desc = "a container for storing objects inside of another object."
 
 	var/updates_icon = 0 // Whether the container should update it's icon when objects are interacted with.
+	var/min_slots = 7	// The amount of slots that will always show for this object, even when empty.
+	var/max_slots = 35 // The hard limit to the amount of slots in a container. This will prevent new items being added even if there is volumetric space.
 	var/max_size = 3.0 // The maximum size of an object that can be placed within the container.
 	var/max_volume = 21 // The total volume of objects that can be placed inside the container.
 	var/whitelist = 1	// Whether the hold_list is a whitelist, or a blacklist.
@@ -218,7 +227,7 @@
 
 	if(src.loc == W)
 		return 0 //Means the storage item is the item itself.
-	if(contents.len >= 35)
+	if(contents.len >= min(max_slots, 49))
 		if(!stop_messages)
 			usr << "<span class='notice'>[loc.name] is full, make some space.</span>"
 		return 0 //Storage item is full
@@ -239,7 +248,7 @@
 			usr << "<span class='notice'>[W] is too big for this [loc].</span>"
 		return 0
 
-	var/sum_w_class = total_volume()+(3**W.w_class)-W.w_class
+	var/sum_w_class = total_volume()+((3**W.w_class)-(W.w_class**2))
 	if(sum_w_class > max_volume)
 		usr << "<span class='notice'>There is not enough room for [W], make some space.</span>"
 
@@ -281,13 +290,13 @@
 
 /obj/storage/proc/total_volume()
 	var/vol = 0
-	for(var/obj/W in src)
-		vol += (3**W.w_class)-W.w_class
+	for(var/obj/W in contents)
+		vol += (3**W.w_class)-(W.w_class**2)
 	return vol
 
 
 //Call this proc to handle the removal of an item from the storage item. The item will be moved to the atom sent as new_target
-/obj/storage/proc/remove_from_storage(obj/W as obj, atom/new_location)
+/obj/storage/proc/remove(obj/W as obj, atom/new_location)
 	if(!istype(W)) return 0
 
 	for(var/mob/M in range(1, src.loc))
@@ -347,3 +356,33 @@
 /obj/storage/hear_talk(mob/M as mob, text, verb, datum/language/speaking)
 	for (var/obj/A in src)
 		A.hear_talk(M, text, verb, speaking)
+
+/atom/proc/storage_depth()
+	var/depth = 0
+	var/cur_atom = src
+	while (!istype(cur_atom, /area))
+		if (istype(cur_atom.loc, /obj/storage))
+			depth += 1
+			cur_atom = cur_atom.loc.loc
+		else if(loc)
+			depth += 1
+			cur_atom = cur_atom.loc
+		else
+			return -1
+
+	return depth
+
+/atom/proc/storage_depth_turf()
+	var/depth = 0
+	var/cur_atom = src
+	while (!istype(cur_atom, /turf))
+		if (istype(cur_atom.loc, /obj/storage))
+			depth += 1
+			cur_atom = cur_atom.loc.loc
+		else if(loc)
+			depth += 1
+			cur_atom = cur_atom.loc
+		else
+			return -1
+
+	return depth

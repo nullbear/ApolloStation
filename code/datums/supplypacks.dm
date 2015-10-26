@@ -172,9 +172,9 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/inflatable
 	name = "Inflatable barriers"
-	contains = list(/obj/item/weapon/storage/briefcase/inflatable,
-					/obj/item/weapon/storage/briefcase/inflatable,
-					/obj/item/weapon/storage/briefcase/inflatable)
+	contains = list(/obj/item/storage/briefcase/inflatable,
+					/obj/item/storage/briefcase/inflatable,
+					/obj/item/storage/briefcase/inflatable)
 	cost = 20
 	containertype = /obj/structure/closet/crate
 	containername = "Inflatable Barrier Crate"
@@ -266,7 +266,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 					/obj/item/clothing/gloves/botanic_leather,
 					/obj/item/clothing/suit/apron,
 					/obj/item/weapon/minihoe,
-					/obj/item/weapon/storage/box/botanydisk
+					/obj/item/storage/box/botanydisk
 					) // Updated with new things
 	cost = 15
 	containertype = /obj/structure/closet/crate/hydroponics
@@ -382,9 +382,9 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/bloodpack
 	name = "BloodPack crate"
-	contains = list(/obj/item/weapon/storage/box/bloodpacks,
-                    /obj/item/weapon/storage/box/bloodpacks,
-                    /obj/item/weapon/storage/box/bloodpacks)
+	contains = list(/obj/item/storage/box/bloodpacks,
+                    /obj/item/storage/box/bloodpacks,
+                    /obj/item/storage/box/bloodpacks)
 	cost = 10
 	containertype = /obj/structure/closet/crate/medical
 	containername = "BloodPack crate"
@@ -518,9 +518,9 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/mechanical
 	name = "Mechanical maintenance crate"
-	contains = list(/obj/item/weapon/storage/belt/utility/full,
-					/obj/item/weapon/storage/belt/utility/full,
-					/obj/item/weapon/storage/belt/utility/full,
+	contains = list(/obj/item/storage/belt/utility/full,
+					/obj/item/storage/belt/utility/full,
+					/obj/item/storage/belt/utility/full,
 					/obj/item/clothing/suit/storage/hazardvest,
 					/obj/item/clothing/suit/storage/hazardvest,
 					/obj/item/clothing/suit/storage/hazardvest,
@@ -904,7 +904,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 	/obj/item/device/camera,
 	/obj/item/device/camera_film,
 	/obj/item/device/camera_film,
-	/obj/item/weapon/storage/photo_album,
+	/obj/item/storage/photo_album,
 	/obj/item/weapon/packageWrap,
 	/obj/item/weapon/reagent_containers/glass/paint/red,
 	/obj/item/weapon/reagent_containers/glass/paint/green,
@@ -927,8 +927,8 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 /datum/supply_packs/randomised/contraband
 	num_contained = 5
 	contains = list(/obj/item/seeds/bloodtomatoseed,
-					/obj/item/weapon/storage/pill_bottle/zoom,
-					/obj/item/weapon/storage/pill_bottle/happy,
+					/obj/item/storage/pill_bottle/zoom,
+					/obj/item/storage/pill_bottle/happy,
 					/obj/item/weapon/reagent_containers/food/drinks/bottle/pwine)
 
 	name = "Contraband crate"
@@ -940,16 +940,16 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/boxes
 	name = "Empty boxes"
-	contains = list(/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box,
-	/obj/item/weapon/storage/box)
+	contains = list(/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box,
+	/obj/item/storage/box)
 	cost = 10
 	containertype = "/obj/structure/closet/crate"
 	containername = "Empty box crate"

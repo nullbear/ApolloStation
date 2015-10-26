@@ -1412,7 +1412,7 @@ datum/design/item/bag_holding
 	req_tech = list("bluespace" = 4, "materials" = 6)
 	materials = list("$gold" = 3000, "$diamond" = 1500, "$uranium" = 250)
 	reliability_base = 80
-	build_path = /obj/item/weapon/storage/backpack/holding
+	build_path = /obj/item/storage/backpack/holding
 
 /*
 datum/design/bluespace_crystal

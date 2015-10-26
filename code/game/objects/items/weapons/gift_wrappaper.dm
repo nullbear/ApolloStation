@@ -63,7 +63,7 @@
 /obj/item/weapon/a_gift/attack_self(mob/M as mob)
 	var/gift_type = pick(/obj/item/weapon/sord,
 		/obj/item/storage/wallet,
-		/obj/item/weapon/storage/photo_album,
+		/obj/item/storage/photo_album,
 		/obj/item/storage/box/snappops,
 		/obj/item/storage/fancy/crayons,
 		/obj/item/storage/backpack/holding,
@@ -103,7 +103,7 @@
 		/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiavulgaris,
 		/obj/item/device/paicard,
 		/obj/item/device/violin,
-		/obj/item/weapon/storage/belt/utility/full,
+		/obj/item/storage/belt/utility/full,
 		/obj/item/clothing/tie/horrible)
 
 	if(!ispath(gift_type,/obj/item))	return

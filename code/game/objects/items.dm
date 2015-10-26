@@ -134,8 +134,8 @@
 			user << "<span class='notice'>You try to move your [temp.display_name], but cannot!"
 			return
 
-	if (istype(src.loc, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = src.loc
+	if (istype(src.loc, /obj/item/storage))
+		var/obj/item/storage/S = src.loc
 		S.remove_from_storage(src)
 
 	src.throwing = 0
@@ -168,9 +168,9 @@
 // Due to storage type consolidation this should get used more now.
 // I have cleaned it up a little, but it could probably use more.  -Sayu
 /obj/item/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = W
-		if(S.use_to_pickup)
+	if(istype(W,/obj/item/storage))
+		var/obj/item/storage/S = W
+		/*if(S.use_to_pickup)
 			if(S.collection_mode) //Mode is set to collect all items on a tile and we clicked on a valid one.
 				if(isturf(src.loc))
 					var/list/rejections = list()
@@ -194,7 +194,7 @@
 						user << "<span class='notice'>You fail to pick anything up with [S].</span>"
 
 			else if(S.can_be_inserted(src))
-				S.handle_item_insertion(src)
+				S.handle_item_insertion(src)*/
 
 	return
 
@@ -388,8 +388,8 @@
 					return 0
 				return 1
 			if(slot_in_backpack)
-				if (H.back && istype(H.back, /obj/item/weapon/storage/backpack))
-					var/obj/item/weapon/storage/backpack/B = H.back
+				if (H.back && istype(H.back, /obj/item/storage/backpack))
+					var/obj/item/storage/backpack/B = H.back
 					if(B.contents.len < B.storage_slots && w_class <= B.max_w_class)
 						return 1
 				return 0

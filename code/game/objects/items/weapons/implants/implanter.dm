@@ -125,8 +125,8 @@
 		if(istype(A.loc,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = A.loc
 			H.u_equip(A)
-		else if(istype(A.loc,/obj/item/weapon/storage))
-			var/obj/item/weapon/storage/S = A.loc
-			S.remove_from_storage(A)
+		else if(istype(A.loc,/obj/item/storage))
+			var/obj/item/storage/S = A.loc
+			//S.remove_from_storage(A)
 		A.loc.contents.Remove(A)
 		update()

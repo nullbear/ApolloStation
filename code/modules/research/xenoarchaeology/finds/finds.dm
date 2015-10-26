@@ -203,10 +203,10 @@
 				apply_image_decorations = 1
 		if(11)
 			item_type = "box"
-			new_item = new /obj/item/weapon/storage/box(src.loc)
+			new_item = new /obj/item/storage/box(src.loc)
 			new_item.icon = 'icons/obj/xenoarchaeology.dmi'
 			new_item.icon_state = "box"
-			var/obj/item/weapon/storage/box/new_box = new_item
+			var/obj/item/storage/box/new_box = new_item
 			new_box.max_w_class = pick(1,2,2,3,3,3,4,4)
 			new_box.max_combined_w_class = rand(new_box.max_w_class, new_box.max_w_class * 10)
 			if(prob(30))

@@ -255,7 +255,7 @@
 	use_power = 1
 	idle_power_usage = 20
 	var/beaker = null
-	var/obj/item/weapon/storage/pill_bottle/loaded_pill_bottle = null
+	var/obj/item/storage/pill_bottle/loaded_pill_bottle = null
 	var/mode = 0
 	var/condi = 0
 	var/useramount = 30 // Last used amount
@@ -299,7 +299,7 @@
 		src.updateUsrDialog()
 		icon_state = "mixer1"
 
-	else if(istype(B, /obj/item/weapon/storage/pill_bottle))
+	else if(istype(B, /obj/item/storage/pill_bottle))
 
 		if(src.loaded_pill_bottle)
 			user << "A pill bottle is already loaded into the machine."

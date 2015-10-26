@@ -319,7 +319,7 @@
 	item_color = "webbing"
 	w_class = 3.0 // so it doesn't fit in pockets
 	var/slots = 3
-	var/obj/item/weapon/storage/internal/hold
+	var/obj/item/storage/internal/hold
 
 /obj/item/clothing/tie/storage/New()
 	..()
@@ -443,7 +443,7 @@
 	if(isliving(user))
 		user.visible_message("\red [user] invades [M]'s personal space, thrusting [src] into their face insistently.","\red You invade [M]'s personal space, thrusting [src] into their face insistently. You are the law.")
 
-/obj/item/weapon/storage/box/holobadge
+/obj/item/storage/box/holobadge
 	name = "holobadge box"
 	desc = "A box claiming to contain holobadges."
 	New()

@@ -27,7 +27,7 @@
 		new /obj/item/clothing/shoes/brown(src)
 		new /obj/item/weapon/cartridge/ce(src)
 		new /obj/item/device/radio/headset/heads/ce(src)
-		new /obj/item/weapon/storage/toolbox/mechanical(src)
+		new /obj/item/storage/toolbox/mechanical(src)
 		new /obj/item/clothing/suit/storage/hazardvest(src)
 		new /obj/item/clothing/mask/gas(src)
 		new /obj/item/device/multitool(src)
@@ -112,7 +112,7 @@
 			new /obj/item/clothing/tie/storage/brown_vest(src)
 		else
 			new /obj/item/clothing/tie/storage/webbing(src)
-		new /obj/item/weapon/storage/toolbox/mechanical(src)
+		new /obj/item/storage/toolbox/mechanical(src)
 		new /obj/item/device/radio/headset/headset_eng(src)
 		new /obj/item/clothing/suit/storage/hazardvest(src)
 		new /obj/item/clothing/mask/gas(src)

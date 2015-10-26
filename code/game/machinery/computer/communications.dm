@@ -550,7 +550,7 @@
 			return ..()
 
 	for(var/obj/item/weapon/circuitboard/communications/commboard in world)
-		if(istype(commboard.loc,/turf) || istype(commboard.loc,/obj/item/weapon/storage))
+		if(istype(commboard.loc,/turf) || istype(commboard.loc,/obj/item/storage))
 			return ..()
 
 	for(var/mob/living/silicon/ai/shuttlecaller in player_list)
@@ -573,7 +573,7 @@
 			return ..()
 
 	for(var/obj/item/weapon/circuitboard/communications/commboard in world)
-		if((istype(commboard.loc,/turf) || istype(commboard.loc,/obj/item/weapon/storage)) && commboard != src)
+		if((istype(commboard.loc,/turf) || istype(commboard.loc,/obj/item/storage)) && commboard != src)
 			return ..()
 
 	for(var/mob/living/silicon/ai/shuttlecaller in player_list)

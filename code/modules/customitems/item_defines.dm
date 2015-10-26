@@ -196,7 +196,7 @@
 	icon_state = "smallnotetext"
 	item_state = "smallnotetext"
 
-/obj/item/weapon/storage/fluff/maye_daye_1 //morrinn: Maye Day
+/obj/item/storage/fluff/maye_daye_1 //morrinn: Maye Day
 	name = "pristine lunchbox"
 	desc = "A pristine stainless steel lunch box. The initials M.D. are engraved on the inside of the lid."
 	icon = 'icons/obj/custom_items.dmi'
@@ -208,7 +208,7 @@
 	icon = 'icons/obj/custom_items.dmi'
 	icon_state = "williamhackett"
 
-/obj/item/weapon/storage/firstaid/fluff/asus_rose //Kerbal22 - Asus Rose
+/obj/item/storage/firstaid/fluff/asus_rose //Kerbal22 - Asus Rose
 	name = "rugged medkit"
 	desc = "A dinged up medkit, it seems to have seen quite a bit of use."
 	icon = 'icons/obj/custom_items.dmi'
@@ -239,7 +239,7 @@
 
 ///////////////////////////// Jarcolr - Uberto Dandolo - Painted secure briefcase /////////////
 
-/obj/item/weapon/storage/secure/briefcase/fluff/uberto_dandolo
+/obj/item/storage/secure/briefcase/fluff/uberto_dandolo
 	name = "painted secure briefcase"
 	desc = "A bulky briefcase with a combination lock. It features the color green, white and red, and a golden eagle in the middle."
 	icon = 'icons/obj/custom_items.dmi'
@@ -380,7 +380,7 @@
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5,10,15,25,30,50,150)
 
-/obj/item/weapon/storage/pill_bottle/fluff/listermedbottle //compactninja: Lister Black
+/obj/item/storage/pill_bottle/fluff/listermedbottle //compactninja: Lister Black
 	name = "Pill bottle (anti-depressants)"
 	desc = "Contains pills used to deal with depression. They appear to be prescribed to Lister Black"
 	New()
@@ -811,21 +811,21 @@
 ///////////////////// Belts //////////////////////////////
 //////////////////////////////////////////////////////////
 
-/obj/item/weapon/storage/belt/medical/fluff/ems
+/obj/item/storage/belt/medical/fluff/ems
 	name = "EMS utility belt"
 	desc = "A sturdy black webbing belt with attached pouches. H. ISHIMARU is scratched on the interior of the buckle."
 	icon = 'icons/obj/custom_items.dmi'
 	icon_state = "emsbelt"
 	item_state = "emsbelt"
 
-/obj/item/weapon/storage/belt/utility/full/fluff/sophie
+/obj/item/storage/belt/utility/full/fluff/sophie
 	name = "Sophie's belt"
 	desc = "A tool-belt in Atmos colours."
 	icon = 'icons/obj/custom_items.dmi'
 	icon_state = "sophie_belt"
 	item_state = "sophie_belt"
 
-/obj/item/weapon/storage/belt/medical/fluff/nashi_belt
+/obj/item/storage/belt/medical/fluff/nashi_belt
 	name = "rainbow medical belt"
 	desc = "A somewhat-worn, modified, rainbow belt."
 	icon = 'icons/obj/custom_items.dmi'
