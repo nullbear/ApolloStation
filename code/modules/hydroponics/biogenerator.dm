@@ -42,7 +42,7 @@
 			updateUsrDialog()
 	else if(processing)
 		user << "\red The biogenerator is currently processing."
-	else if(istype(O, /obj/item/weapon/storage/bag/plants))
+	else if(istype(O, /obj/item/storage/bag/plants))
 		var/i = 0
 		for(var/obj/item/weapon/reagent_containers/food/snacks/grown/G in contents)
 			i++
@@ -196,7 +196,7 @@
 		if("satchel")
 			new/obj/item/storage/backpack/satchel(src.loc)
 		if("cashbag")
-			new/obj/item/weapon/storage/bag/cash(src.loc)
+			new/obj/item/storage/bag/cash(src.loc)
 		if("monkey")
 			new/mob/living/carbon/human/monkey(src.loc)
 	processing = 0

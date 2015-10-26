@@ -1,4 +1,4 @@
-/obj/item/weapon/storage/box/syndicate/
+/obj/item/storage/box/syndicate/
 	New()
 		..()
 		switch (pickweight(list("bloodyspai" = 1, "stealth" = 1, "screwed" = 1, "guns" = 1, "murder" = 1, "freedom" = 1, "hacker" = 1, "lordsingulo" = 1, "smoothoperator" = 1)))
@@ -65,96 +65,95 @@
 				new /obj/item/weapon/gun/projectile/pistol(src)
 				new /obj/item/weapon/silencer(src)
 				new /obj/item/weapon/soap/syndie(src)
-				new /obj/item/weapon/storage/bag/trash(src)
+				new /obj/item/storage/bag/trash(src)
 				new /obj/item/bodybag(src)
 				new /obj/item/clothing/under/suit_jacket(src)
 				new /obj/item/clothing/shoes/laceup(src)
 				return
 
-/obj/item/weapon/storage/box/syndie_kit
+/obj/item/storage/box/syndie_kit
 	name = "box"
 	desc = "A sleek, sturdy box"
 	icon_state = "box_of_doom"
 
-/obj/item/weapon/storage/box/syndie_kit/imp_freedom
+/obj/item/storage/box/syndie_kit/imp_freedom
 	name = "boxed freedom implant (with injector)"
 
-/obj/item/weapon/storage/box/syndie_kit/imp_freedom/New()
+/obj/item/storage/box/syndie_kit/imp_freedom/New()
 	..()
-	var/obj/item/weapon/implanter/O = new(src)
+	var/obj/item/weapon/implanter/O = new(storage)
 	O.imp = new /obj/item/weapon/implant/freedom(O)
 	O.update()
 	return
 
-/obj/item/weapon/storage/box/syndie_kit/imp_compress
+/obj/item/storage/box/syndie_kit/imp_compress
 	name = "box (C)"
 
-/obj/item/weapon/storage/box/syndie_kit/imp_compress/New()
-	new /obj/item/weapon/implanter/compressed(src)
+/obj/item/storage/box/syndie_kit/imp_compress/New()
 	..()
+	new /obj/item/weapon/implanter/compressed(storage)
 	return
 
-/obj/item/weapon/storage/box/syndie_kit/imp_explosive
+/obj/item/storage/box/syndie_kit/imp_explosive
 	name = "box (E)"
 
-/obj/item/weapon/storage/box/syndie_kit/imp_explosive/New()
-	new /obj/item/weapon/implanter/explosive(src)
+/obj/item/storage/box/syndie_kit/imp_explosive/New()
 	..()
+	new /obj/item/weapon/implanter/explosive(storage)
 	return
 
-/obj/item/weapon/storage/box/syndie_kit/imp_uplink
+/obj/item/storage/box/syndie_kit/imp_uplink
 	name = "boxed uplink implant (with injector)"
 
-/obj/item/weapon/storage/box/syndie_kit/imp_uplink/New()
+/obj/item/storage/box/syndie_kit/imp_uplink/New()
 	..()
-	var/obj/item/weapon/implanter/O = new(src)
+	var/obj/item/weapon/implanter/O = new(storage)
 	O.imp = new /obj/item/weapon/implant/uplink(O)
 	O.update()
 	return
 
-/obj/item/weapon/storage/box/syndie_kit/space
+/obj/item/storage/box/syndie_kit/space
 	name = "boxed space suit and helmet"
 
-/obj/item/weapon/storage/box/syndie_kit/space/New()
+/obj/item/storage/box/syndie_kit/space/New()
 	..()
-	new /obj/item/clothing/suit/space/syndicate(src)
-	new /obj/item/clothing/head/helmet/space/syndicate(src)
-	new /obj/item/clothing/mask/gas/syndicate(src)
-	new /obj/item/weapon/tank/emergency_oxygen/double(src)
+	new /obj/item/clothing/suit/space/syndicate(storage)
+	new /obj/item/clothing/head/helmet/space/syndicate(storage)
+	new /obj/item/clothing/mask/gas/syndicate(storage)
+	new /obj/item/weapon/tank/emergency_oxygen/double(storage)
 	return
 
-/obj/item/weapon/storage/box/syndie_kit/chameleon
+/obj/item/storage/box/syndie_kit/chameleon
 	name = "chameleon kit"
 	desc = "Comes with all the clothes you need to impersonate most people.  Acting lessons sold seperately."
-	storage_slots = 10
 
-/obj/item/weapon/storage/box/syndie_kit/chameleon/New()
+/obj/item/storage/box/syndie_kit/chameleon/New()
 	..()
-	new /obj/item/clothing/under/chameleon(src)
-	new /obj/item/clothing/head/chameleon(src)
-	new /obj/item/clothing/suit/chameleon(src)
-	new /obj/item/clothing/shoes/chameleon(src)
-	new /obj/item/storage/backpack/chameleon(src)
-	new /obj/item/clothing/gloves/chameleon(src)
-	new /obj/item/clothing/mask/chameleon(src)
-	new /obj/item/clothing/glasses/chameleon(src)
-	new /obj/item/weapon/gun/projectile/chameleon(src)
-	new /obj/item/ammo_magazine/chameleon(src)
+	new /obj/item/clothing/under/chameleon(storage)
+	new /obj/item/clothing/head/chameleon(storage)
+	new /obj/item/clothing/suit/chameleon(storage)
+	new /obj/item/clothing/shoes/chameleon(storage)
+	new /obj/item/storage/backpack/chameleon(storage)
+	new /obj/item/clothing/gloves/chameleon(storage)
+	new /obj/item/clothing/mask/chameleon(storage)
+	new /obj/item/clothing/glasses/chameleon(storage)
+	new /obj/item/weapon/gun/projectile/chameleon(storage)
+	new /obj/item/ammo_magazine/chameleon(storage)
 
-/obj/item/weapon/storage/box/syndie_kit/clerical
+/obj/item/storage/box/syndie_kit/clerical
 	name = "clerical kit"
 	desc = "Comes with all you need to fake paperwork. Assumes you have passed basic writing lessons."
 
-/obj/item/weapon/storage/box/syndie_kit/clerical/New()
+/obj/item/storage/box/syndie_kit/clerical/New()
 	..()
-	new /obj/item/weapon/stamp/chameleon(src)
-	new /obj/item/weapon/pen/chameleon(src)
+	new /obj/item/weapon/stamp/chameleon(storage)
+	new /obj/item/weapon/pen/chameleon(storage)
 
-/obj/item/weapon/storage/box/syndie_kit/spybug
+/obj/item/storage/box/syndie_kit/spybug
 	name = "spybug kit"
 	desc = "Comes with everything you'll need to collect intel on the enemy."
 
-/obj/item/weapon/storage/box/syndie_kit/spybug/New()
+/obj/item/storage/box/syndie_kit/spybug/New()
 	..()
-	new /obj/item/clothing/head/helmet/virtual(src)
-	new /obj/item/weapon/holder/spybug(src)
+	new /obj/item/clothing/head/helmet/virtual(storage)
+	new /obj/item/weapon/holder/spybug(storage)

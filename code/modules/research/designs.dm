@@ -1568,7 +1568,7 @@ datum/design/item/chameleon
 	id = "chameleon"
 	req_tech = list("syndicate" = 2)
 	materials = list("$metal" = 500)
-	build_path = /obj/item/weapon/storage/box/syndie_kit/chameleon
+	build_path = /obj/item/storage/box/syndie_kit/chameleon
 
 datum/design/item/omnitool
 	name = "Omnitool"

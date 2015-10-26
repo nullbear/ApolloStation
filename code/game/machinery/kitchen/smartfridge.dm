@@ -180,16 +180,16 @@
 
 			nanomanager.update_uis(src)
 
-	else if(istype(O, /obj/item/weapon/storage/bag/plants))
-		var/obj/item/weapon/storage/bag/plants/P = O
+	else if(istype(O, /obj/item/storage/bag/plants))
+		var/obj/item/storage/bag/plants/P = O
 		var/plants_loaded = 0
-		for(var/obj/G in P.contents)
+		for(var/obj/G in P.storage)
 			if(accept_check(G))
 				if(contents.len >= max_n_of_items)
 					user << "<span class='notice'>\The [src] is full.</span>"
 					return 1
 				else
-					P.remove_from_storage(G,src)
+					P.storage.remove_from_storage(G,src)
 					if(item_quants[G.name])
 						item_quants[G.name]++
 					else

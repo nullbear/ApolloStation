@@ -323,41 +323,41 @@
 
 /obj/item/clothing/tie/storage/New()
 	..()
-	hold = new/obj/item/weapon/storage/internal(src)
-	hold.storage_slots = slots
+	//hold = new/obj/item/storage/internal(src)
+	//hold.storage_slots = slots
 
 /obj/item/clothing/tie/storage/attack_hand(mob/user as mob)
 	if (has_suit)	//if we are part of a suit
-		hold.open(user)
+		//hold.open(user)
 		return
 
-	if (hold.handle_attack_hand(user))	//otherwise interact as a regular storage item
-		..(user)
+	//if (hold.handle_attack_hand(user))	//otherwise interact as a regular storage item
+	//	..(user)
 
 /obj/item/clothing/tie/storage/MouseDrop(obj/over_object as obj)
 	if (has_suit)
 		return
 
-	if (hold.handle_mousedrop(usr, over_object))
-		..(over_object)
+	//if (hold.handle_mousedrop(usr, over_object))
+	//	..(over_object)
 
 /obj/item/clothing/tie/storage/attackby(obj/item/W as obj, mob/user as mob)
-	return hold.attackby(W, user)
+	//return hold.attackby(W, user)
 
 /obj/item/clothing/tie/storage/emp_act(severity)
-	hold.emp_act(severity)
-	..()
+	//hold.emp_act(severity)
+	//..()
 
 /obj/item/clothing/tie/storage/hear_talk(mob/M, var/msg, verb, datum/language/speaking)
-	hold.hear_talk(M, msg, verb, speaking)
-	..()
+	//hold.hear_talk(M, msg, verb, speaking)
+	//..()
 
 /obj/item/clothing/tie/storage/attack_self(mob/user as mob)
 	user << "<span class='notice'>You empty [src].</span>"
-	var/turf/T = get_turf(src)
-	hold.hide_from(usr)
-	for(var/obj/item/I in hold.contents)
-		hold.remove_from_storage(I, T)
+	//var/turf/T = get_turf(src)
+	//hold.hide_from(usr)
+	//for(var/obj/item/I in hold.contents)
+	//	hold.remove_from_storage(I, T)
 	src.add_fingerprint(user)
 
 /obj/item/clothing/tie/storage/webbing
@@ -465,12 +465,12 @@
 
 /obj/item/clothing/tie/storage/knifeharness/New()
 	..()
-	hold.max_combined_w_class = 4
-	hold.can_hold = list("/obj/item/weapon/hatchet/unathiknife",\
+	//hold.max_combined_w_class = 4
+	//hold.can_hold = list("/obj/item/weapon/hatchet/unathiknife",\
 	"/obj/item/weapon/kitchen/utensil/knife",\
 	"/obj/item/weapon/kitchen/utensil/pknife",\
 	"/obj/item/weapon/kitchenknife",\
 	"/obj/item/weapon/kitchenknife/ritual")
 
-	new /obj/item/weapon/kitchenknife/unathiknife(hold)
-	new /obj/item/weapon/kitchenknife/unathiknife(hold)
+	//new /obj/item/weapon/kitchenknife/unathiknife(hold)
+	//new /obj/item/weapon/kitchenknife/unathiknife(hold)

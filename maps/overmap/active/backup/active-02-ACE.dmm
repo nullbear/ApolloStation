@@ -810,7 +810,7 @@
 "pD" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/plating,/area/mine/maint_s)
 "pE" = (/obj/structure/stool/bed/roller,/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/machinery/firealarm{pixel_y = 24},/turf/simulated/floor{icon_state = "white"},/area/research_outpost/med)
 "pF" = (/obj/machinery/alarm{frequency = 1441; pixel_y = 22},/turf/simulated/floor{icon_state = "white"},/area/research_outpost/med)
-"pG" = (/obj/structure/table,/obj/item/weapon/storage/firstaid{pixel_x = -1; pixel_y = 1},/obj/item/weapon/storage/firstaid/o2{pixel_x = 1; pixel_y = -1},/obj/item/device/radio/intercom{pixel_y = 26},/turf/simulated/floor{icon_state = "white"},/area/research_outpost/med)
+"pG" = (/obj/structure/table,/obj/item/weapon/storage/firstaid{pixel_x = -1; pixel_y = 1},/obj/item/storage/firstaid/o2{pixel_x = 1; pixel_y = -1},/obj/item/device/radio/intercom{pixel_y = 26},/turf/simulated/floor{icon_state = "white"},/area/research_outpost/med)
 "pH" = (/obj/structure/table,/obj/item/bodybag{pixel_x = 1; pixel_y = -1},/obj/item/bodybag/cryobag{pixel_x = -1; pixel_y = 1},/turf/simulated/floor{icon_state = "white"},/area/research_outpost/med)
 "pI" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 4},/turf/simulated/floor/plating,/area/research_outpost/med)
 "pJ" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 4},/turf/simulated/floor{icon_state = "cafeteria"; dir = 2},/area/mine/cafeteria)

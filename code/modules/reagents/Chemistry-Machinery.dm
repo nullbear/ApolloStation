@@ -904,7 +904,7 @@
 		return 1
 
 	//Fill machine with the plantbag!
-	if(istype(O, /obj/item/weapon/storage/bag/plants))
+	if(istype(O, /obj/item/storage/bag/plants))
 
 		for (var/obj/item/weapon/reagent_containers/food/snacks/grown/G in O.contents)
 			O.contents -= G
