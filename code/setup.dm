@@ -858,6 +858,8 @@ var/list/be_special_flags = list(
 #define STAGE_FIVE	9
 #define STAGE_SUPER	11
 
+#define SM_PHORON_VALUE 20 // The amount of phoron required to create a size 1 supermatter shard, or to repair the engine 1% integrity in moles. 20 = 1 bar of solid phoron.
+
 #define TICKS_IN_DAY 864000
 #define TICKS_IN_SECOND 10
 

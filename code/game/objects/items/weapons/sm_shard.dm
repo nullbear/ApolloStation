@@ -110,7 +110,7 @@
 	..()
 
 /obj/item/weapon/shard/supermatter/proc/feed( var/datum/gas_mixture/gas )
-	size += gas.gas["phoron"]
+	size += (gas.gas["phoron"])/SM_PHORON_VALUE
 
 	if( size > max_size )
 		shatter()

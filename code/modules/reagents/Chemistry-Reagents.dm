@@ -1688,7 +1688,7 @@ datum
 				the_turf.assume_gas("phoron", volume, T20C)
 			reaction_turf(var/turf/T, var/volume)
 				src = null
-				T.assume_gas("phoron", volume, T20C)
+				T.assume_gas("phoron", volume*(20/SM_PHORON_VALUE), T20C)
 				return
 
 		toxin/lexorin

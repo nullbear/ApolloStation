@@ -12,14 +12,14 @@
 	var/obj/item/weapon/shard/supermatter/shard = null
 
 	var/list/mat = list( "Osmium", "Phoron", "Diamonds", "Platinum", "Gold", "Uranium",  "Silver", "Steel", "Supermatter" )
-	var/list/mat_mod = list(    "Steel" = 3.5,
-								"Silver" = 1.0,
-								"Uranium" = 0.5,
-								"Gold" = 0.5,
-								"Platinum" = 0.3,
-								"Diamonds" = 0.2,
-								"Phoron" = 0.2,
-								"Osmium" = 0.1,
+	var/list/mat_mod = list(    "Steel" = 20,
+								"Silver" = 5,
+								"Uranium" = 2.5,
+								"Gold" = 2.5,
+								"Platinum" = 1.5,
+								"Diamonds" = 1,
+								"Phoron" = 1,
+								"Osmium" = 0.5,
 								"Supermatter" = 1.0 ) // modifier for output amount
 
 	var/list/mat_peak = list()
@@ -105,7 +105,7 @@
 				new /obj/item/weapon/shard/supermatter( get_turf( src ), shard.smlevel+1 )
 				break
 			else
-				var/size_modifier = shard.size*0.2
+				var/size_modifier = shard.size*(20/SM_PHORON_VALUE)
 				amount = (( max_distance-distance )/max_distance )*mat_mod[cur_mat] // Produces amount based on distance from flow and modifier
 				amount += amount*size_modifier
 				amount = round( amount )
