@@ -123,8 +123,7 @@
 	if( size > 100 )
 		src.visible_message( "The supermatter shard grows into a full-sized supermatter crystal!" )
 		var/obj/machinery/power/supermatter/S = new /obj/machinery/power/supermatter( get_turf( src ))
-		S.smlevel = smlevel
-		S.update_icon()
+		//S.smlevel = smlevel
 	else if( size >= 10 )
 		src.visible_message( "The supermatter shard shatters into smaller fragments!" )
 		for( size, size >= 10, size -= 10 )

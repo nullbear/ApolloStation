@@ -1,0 +1,57 @@
+<div class="item">
+	<div class="itemLabel">
+		Total Mass:
+	</div>
+	<div class="itemContent">
+		{{if data.mass > 0}}
+			<span class='good'>{{:data.mass}} Kg</span>
+		{{else}}
+			[<span class='bad'>No Supermatter Crystal Detected</span>]
+		{{/if}}
+	</div>
+</div>
+
+<div class="item">
+	<div class="itemLabel">
+		Energetic Resonance Level:
+	</div>
+	<div class="itemContent">
+		{{if data.resonance > 100}}
+			<span class='bad'>{{:data.resonance}} %</span>
+		{{else data.resonance > 75}}
+			<span class='good'>{{:data.resonance}} %</span>
+		{{else data.resonance > 25}}
+			<span class='average'>{{:data.resonance}} %</span>
+		{{else data.resonance > 0}}
+			<span class='bad'>{{:data.resonance}} %</span>
+		{{else}}
+			<span class='bad'>No Energetic Resonance Detected</span>]
+		{{/if}}
+	</div>
+</div>
+
+<div class="item">
+	<div class="itemLabel">
+		Structural Instability:
+	</div>
+	<div class="itemContent">
+		{{if data.instability}}
+			<span class='average'>{{:data.instability}} %</span>
+		{{else}}
+			[<span class='good'>No Instability Detected</span>]
+		{{/if}}
+	</div>
+</div>
+
+<div class="item">
+	<div class="itemLabel">
+		Particle Decay Rate:
+	</div>
+	<div class="itemContent">
+		{{if data.decay}}
+			<span class='good'>{{:data.decay}} %</span>
+		{{else}}
+			[<span class='average'>No Energetic Decay Detected</span>]
+		{{/if}}
+	</div>
+</div>

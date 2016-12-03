@@ -102,10 +102,10 @@
 	for( var/sm_piece in sm_pieces )
 		if( istype( sm_piece, /obj/item/weapon/shard/supermatter ))
 			var/obj/item/weapon/shard/supermatter/shard = sm_piece
-			total_size += shard.size + ( 15*( shard.smlevel/MAX_SUPERMATTER_LEVEL )) // A max level shard will add +15 to its size
+			total_size += shard.size + ( 15 ) // A max level shard will add +15 to its size
 		if( istype( sm_piece, /obj/machinery/power/supermatter ))
-			var/obj/machinery/power/supermatter/core = sm_piece
-			total_size += ( SM_CORE_SIZE*core.smlevel ) // A level 3 core is worth as many as three level 1 cores
+			//var/obj/machinery/power/supermatter/core = sm_piece
+			total_size += ( 1 ) // A level 3 core is worth as many as three level 1 cores
 
 	for( var/sm_piece in sm_pieces )
 		qdel( sm_piece )

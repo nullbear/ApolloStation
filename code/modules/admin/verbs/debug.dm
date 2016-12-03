@@ -1118,7 +1118,7 @@ But you can call procs that are of type /mob/living/carbon/human/proc/ for that 
 			else if(istype(M,/obj/machinery/power/supermatter))
 				SM = M
 				spawn(50)
-					SM.power = 320
+					SM.instability = 1
 
 			else if(istype(M,/obj/machinery/power/smes))	//This is the SMES inside the engine room.  We don't need much power.
 				var/obj/machinery/power/smes/SMES = M

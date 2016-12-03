@@ -24,6 +24,7 @@
 								  "trash_vented" = "Space Trash Created: ",
 								  "ai_follow" = "People Watched: ",
 								  "banned" = "People Fired: ",
+								  "energy_depleted" = "Bluespace Depleted: "
 								 )
 
 	// The actual stat value
@@ -50,6 +51,7 @@
 						   "trash_vented" = 0, // Trash vented to space
 						   "ai_follow" = 0,
 						   "banned" = 0,
+						   "energy_depleted" = 0 // Units of 'bluespace particles' permanently depleted.
 						   )
 
 	// Just add any stats that need units
@@ -65,6 +67,7 @@
 						   "artifacts" = " alien artifacts",
 						   "break_time" = " minutes",
 						   "ai_follow" = " people spied on",
+						   "energy_depleted" = " moles"
 						   )
 
 datum/round_stats/proc/report_death(var/mob/living/H)
@@ -176,7 +179,8 @@ datum/round_stats/proc/save_stats()
 	q = q + "cargo_profit,"
 	q = q + "trash_vented,"
 	q = q + "ai_follow,"
-	q = q + "banned"
+	q = q + "banned,"
+	q = q + "energy_depleted"
 	q = q + ") VALUES ("
 	q = q + "null,"
 	q = q + "'[gamemode]',"
@@ -204,7 +208,8 @@ datum/round_stats/proc/save_stats()
 	q = q + "[stats["cargo_profit"]],"
 	q = q + "[stats["trash_vented"]],"
 	q = q + "[stats["ai_follow"]],"
-	q = q + "[stats["banned"]])"
+	q = q + "[stats["banned"]],"
+	q = q + "[stats["energy_depleted"]])"
 	var/DBQuery/query = dbcon.NewQuery(q)
 	query.Execute()
 
